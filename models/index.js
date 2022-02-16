@@ -37,4 +37,4 @@ Users.hasMany(Comments,{
     foreignKey: 'posters_id'
 });
 
-module.exports = Users, Plants, UserPlants, Comments;
+module.exports = {Users, Plants, UserPlants, Comments};

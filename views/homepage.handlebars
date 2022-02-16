@@ -14,6 +14,26 @@ I created this as a template to start server projects more easily and to wrap my
     {{sample_function 1  2}}
 </p>
 
+<h2>All Plants Object</h2>
+{{#each plants as |plant|}}
+<p>{{plant.common_name}}</p>
+{{/each}}
+
+<h2>All users</h2>
+{{#each users as |user|}}
+<p>{{user.username}}</p>
+{{/each}}
+
+<h2>All User Plants</h2>
+{{#each userPlants as |userPlant|}}
+<p>
+    Name: {{userPlant.nickname}} </br>
+     Plant ID: {{userPlant.plant_id}} </br>
+      Plant Type: {{userPlant.plant.common_name}} </br>
+     user ID: {{userPlant.user_id}}
+</p>
+{{/each}}
+
 
 
         

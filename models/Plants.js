@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 //Creates a User modle
-class Plants extends Model { };
+class Plants extends Model { }
 
 Plants.init(
     {
