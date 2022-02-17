@@ -58,7 +58,17 @@ router.get('/user/:id', (req, res) => {
     UserPlants.findOne({
         where: {
             user_id: req.params.id
-        }
+        },
+        include: [
+            {
+               model: Plants,
+               attributes: ['common_name']
+            },
+            {
+                model: Users,
+                attributes: ['username']
+             }
+         ]
     }).then(dbUserPlantData => {
         if (!dbUserPlantData) {
             res.status(404).json({ message: 'User plants not found under that user_id' });
