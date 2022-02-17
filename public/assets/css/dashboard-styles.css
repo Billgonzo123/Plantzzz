@@ -5,7 +5,7 @@ main {
 }
 
 .plant-grid {
-    width: 70%;
+    max-width: 70vw;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -24,10 +24,19 @@ main {
     background: #F1F0F0;
 }
 
+.card, .add-plant {
+    align-items: center;
+    justify-content: center;
+}
+
 .schedule {
-    width: 30%;
+    max-width: 30vw;
+    height: 100vh;
+    margin: 20px;
+    overflow: scroll;
     display: flex;
     flex-direction: column;
     flex: 1;
+    background: #F6EEE1;
 }
 
