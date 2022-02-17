@@ -24,6 +24,10 @@ Plants.init(
             type: DataTypes.STRING,
             allowNull: false
         },
+        soil: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         watering_interval: {
             type: DataTypes.INTEGER,
             allowNull: false
