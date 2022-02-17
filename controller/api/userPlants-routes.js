@@ -6,7 +6,14 @@ const { withAuth } = require('../../utils/auth') //this is middleware to check i
 
 //GET all user plants
 router.get('/', (req, res) => {
-    UserPlants.findAll()
+    UserPlants.findAll({
+        include: [
+            {
+               model: Plants,
+               attributes: ['common_name']
+            }
+         ]
+    })
         .then(dbUserData => res.json(dbUserData))
         .catch(err => {
             console.log(err);
@@ -19,7 +26,13 @@ router.get('/:id', (req, res) => {
     UserPlants.findOne({
         where: {
             id: req.params.id
-        }
+        },
+        include: [
+            {
+               model: Plants,
+               attributes: ['common_name']
+            }
+         ]
     }).then(dbUserPlantData => {
         if (!dbUserPlantData) {
             res.status(404).json({ message: 'User plant not found under that id' });
@@ -77,7 +90,6 @@ router.put('/:id',withAuth , (req, res) => {
         }
     })
         .then(dbUserPlantData => {
-console.log('-----------------------------------', dbUserPlantData);
             if (!dbUserPlantData[0]) {
                 res.status(404).json({ message: 'User Plant not found under this ID or nothing to update' })
                 return;

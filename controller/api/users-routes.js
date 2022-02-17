@@ -7,7 +7,7 @@ const {withAuth} = require('../../utils/auth') //this is middleware to check if 
 
 //GET all user info
 router.get('/', (req,res) => {
-    Users.findAll()
+    Users.findAll({})
         .then(dbUserData => res.json(dbUserData))
         .catch(err => {
             console.log(err);
@@ -66,6 +66,7 @@ router.put('/:id',withAuth, (req, res) => {
         where: {
             id: req.params.id
         }
+        
 
     })
         .then(dbUserData => {
