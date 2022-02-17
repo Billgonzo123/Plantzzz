@@ -1,0 +1,30 @@
+:root {
+    --main-font: 'Biryani', sans-serif;
+}
+
+body {
+    margin: 20px;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+.account-icon {
+    width: 60px;
+    height: 60px;
+    background: #145F5A;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-icon p {
+    color: #fff;
+    font-size: 36px;
+    padding-top: 10px;
+    font-family: var(--main-font);
+}

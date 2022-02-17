@@ -1,0 +1,35 @@
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.plant-grid {
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex: 2;
+    color: blue;
+}
+
+.card {
+    width: 300px;
+    height: 350px;
+    margin: 16px;
+    display: flex;
+    border-radius: 5%;
+    border: 2px;
+    border-style: dotted;
+    border-color: black;
+    background: #F1F0F0;
+}
+
+.schedule {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: aqua;
+}
+
