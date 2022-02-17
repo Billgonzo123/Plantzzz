@@ -10,7 +10,7 @@ const helpers = require('./utils/helpers');
 const hbs = exphbs.create({helpers});
 
 const session = require('express-session');
-const { render } = require('express/lib/response');
+const {Users} = require('./models')
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -46,3 +46,4 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+

@@ -6,12 +6,15 @@ const Comments = require('./Comments');
 //create User Plant associations
 
 UserPlants.belongsTo(Users, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+
+  
 });
 
 Users.hasMany(UserPlants, {
     foreignKey: 'user_id'
-});
+}
+);
 UserPlants.belongsTo(Plants, {
     foreignKey: 'plant_id'
 });
@@ -22,11 +25,13 @@ Plants.hasMany(UserPlants, {
 
 //create comment associations
 Comments.belongsTo(Users, {
-    foreignKey: 'posters_id'
+    foreignKey: 'posters_id',
+
 });
 
 Comments.belongsTo(Plants, {
-    foreignKey: 'plant_id'
+    foreignKey: 'plant_id',
+  
 });
 
 Plants.hasMany(Comments, {
@@ -34,7 +39,8 @@ Plants.hasMany(Comments, {
 });
 
 Users.hasMany(Comments,{
-    foreignKey: 'posters_id'
-});
+    foreignKey: 'posters_id',
+},
+);
 
 module.exports = {Users, Plants, UserPlants, Comments};

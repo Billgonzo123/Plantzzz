@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
    const users = dbUsers.map(data => data.get({ plain: true }));
 
 
+
    const dbUserPlants = await UserPlants.findAll({
       include: [
          {

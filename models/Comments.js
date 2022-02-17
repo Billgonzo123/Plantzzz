@@ -18,7 +18,6 @@ Comments.init(
         },
         posters_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
             references: {
                 modle: 'users',
                 key: 'id'
@@ -26,7 +25,7 @@ Comments.init(
         },
         plant_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
             references: {
                 modle: 'plants',
                 key: 'id'
