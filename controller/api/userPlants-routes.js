@@ -53,6 +53,37 @@ router.get('/:id', (req, res) => {
         })
 });
 
+//GET a single user plant by nickname
+router.get('/nickname/:name', (req, res) => {
+    const formattedName = req.params.name.replace(/-/g,' ');
+    console.log(formattedName);
+
+    UserPlants.findOne({
+        where: {
+            nickname: formattedName
+        },
+        include: [
+            {
+               model: Plants,
+               attributes: ['common_name']
+            },
+            {
+                model: Users,
+                attributes: ['username']
+             }
+         ]
+    }).then(dbUserPlantData => {
+        if (!dbUserPlantData) {
+            res.status(404).json({ message: 'User plant not found under that nickname' });
+        }
+        res.json(dbUserPlantData)
+    })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json;
+        })
+});
+
 //GET all user plants by user_id
 router.get('/user/:id', (req, res) => {
     UserPlants.findAll({
