@@ -1,10 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+
 const bcrypt = require('bcrypt');
 
 //Creates a User modle
 class Users extends Model {
-       //set up method to check password (hash)
+       //set up method to check password (hash) for logging in
        checkPassword(loginPw) {
         return bcrypt.compareSync(loginPw, this.password);
     }
@@ -46,7 +47,7 @@ Users.init(
             // setup encryption of password beforeCreate (before added to DB)
             async beforeCreate(newUserData) {
                 newUserData.password = await bcrypt.hash(newUserData.password, 10)
-                return updatedUserData
+                return newUserData
             },
             // setup encryption of password beforeUpdate (before updated and added to DB)
             async beforeUpdate(updatedUserData) {

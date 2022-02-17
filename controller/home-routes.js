@@ -22,7 +22,6 @@ router.get('/', async (req, res) => {
    });
    const userPlants = dbUserPlants.map(data => data.get({ plain: true }));
 
-   console.log(userPlants)
    // simply render the handlebars file homePage
    //this will render homepage INSIDE main.handlebars at {{{body}}}
    res.render('homepage', { plants, users, userPlants });

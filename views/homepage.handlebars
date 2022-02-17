@@ -14,26 +14,44 @@ I created this as a template to start server projects more easily and to wrap my
     {{sample_function 1  2}}
 </p>
 
-<h2>All Plants Object</h2>
+<!-- This displays all the data from the tables -->
+<P>------Plants-------</P>
 {{#each plants as |plant|}}
-<p>{{plant.common_name}}</p>
+
+<p>
+   CommonName: {{plant.common_name}}</br>
+    Botanical name: {{plant.botanical_name}}</br>
+     Light:  {{plant.light}}</br>
+      Days between watering: {{plant.watering_interval}}</br>
+      Difficulty:  {{plant.difficulty}}</br>
+      Soil: {{plant.soil}}</br>
+      Temp:    {{plant.temp}}</br>
+
+</p>
 {{/each}}
 
-<h2>All users</h2>
+<P>-------Users---------</P>
 {{#each users as |user|}}
-<p>{{user.username}}</p>
+
+<p>
+    {{user.username}} </br>
+    {{user.email}} </br>
+    {{user.password}} </br>
+    </p>
 {{/each}}
 
-<h2>All User Plants</h2>
+<P>--------User Plants--------</P>
 {{#each userPlants as |userPlant|}}
+
 <p>
     Name: {{userPlant.nickname}} </br>
      Plant ID: {{userPlant.plant_id}} </br>
       Plant Type: {{userPlant.plant.common_name}} </br>
      user ID: {{userPlant.user_id}}
+     Plant Type: {{userPlant.initial_water_date}} </br>
+     Days between waterings: {{userPlant.watering_interval}} </br>
 </p>
 {{/each}}
-
 
 
         
