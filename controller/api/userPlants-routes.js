@@ -11,7 +11,11 @@ router.get('/', (req, res) => {
             {
                model: Plants,
                attributes: ['common_name']
-            }
+            },
+            {
+                model: Users,
+                attributes: ['username']
+             }
          ]
     })
         .then(dbUserData => res.json(dbUserData))
@@ -31,7 +35,11 @@ router.get('/:id', (req, res) => {
             {
                model: Plants,
                attributes: ['common_name']
-            }
+            },
+            {
+                model: Users,
+                attributes: ['username']
+             }
          ]
     }).then(dbUserPlantData => {
         if (!dbUserPlantData) {
