@@ -83,7 +83,7 @@ router.put('/:id',withAuth, (req, res) => {
 
 // DELETE /api/users/1
 router.delete('/:id', (req, res) => {
-    User.destroy({
+    Users.destroy({
         where: {
             id: req.params.id
         }
