@@ -101,7 +101,7 @@ router.delete('/:id', (req, res) => {
         });
 });
 
-//login request
+//login request /api/users
 router.post('/login', (req, res) => {
     // expects {email: 'user@gmail.com', password: 'password1234'}
 
@@ -133,10 +133,11 @@ router.post('/login', (req, res) => {
     });
 });
 
-//post request to logout. destoys the session
+//post request to logout. destoys the session api/users
 router.post('/logout', withAuth, (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
+            console.log('-----Logged out------');
           res.status(204).end();
         });
       }
