@@ -83,7 +83,13 @@ router.put('/:id', isAdmin, (req, res) => {
             id: req.params.id
         }
     })
-        .then(dbPlantData => res.json(dbPlantData))
+        .then(dbPlantData => {
+            if(!dbPlantData[0]) {
+                res.status(404).json({message: 'Nothing to update'});
+                return;
+            }
+            res.json(dbPlantData)
+    })
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
