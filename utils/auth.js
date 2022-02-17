@@ -5,6 +5,15 @@ const withAuth = (req, res, next) => {
     } else {
         next();
     }
+};
+
+const isAdmin = (req, res, next) => {
+  
+    if (!req.session.admin) {
+        res.json({message: 'Must be an admin to make these changes'});
+    } else {
+        next();
+    }
 }
 
-module.exports = withAuth;
+module.exports = {withAuth, isAdmin};

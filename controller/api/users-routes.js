@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const {Users, UserPlants, Plants  } = require('../../models');
-const withAuth = require('../../utils/auth') //this is middleware to check if user is loggin
+const {withAuth} = require('../../utils/auth') //this is middleware to check if user is loggin
 
 //-----api route /api/users-----//
 
@@ -145,6 +145,45 @@ router.post('/logout', withAuth, (req, res) => {
         res.status(404).end();
       }
 })
+
+
+////special admin login 
+//login request /api/users/login/admin
+router.post('/login/admin', (req, res) => {
+    // expects {email: 'user@gmail.com', password: 'password1234'}
+    //if this is not the admin logging in, go to /login page
+    if (req.body.email !== 'admin@adminemail.com') res.redirect('/login');
+
+    //if the admin email is used check the password
+    Users.findOne({
+        where: {
+            email: req.body.email
+        }
+    }).then(dbUserData => {
+        if (!dbUserData) {
+            res.status(400).json({ message: 'No user with that email address!' });
+            return;
+        };
+        // //verify user password with the method we attached to the User model "checkPassword"
+        const validPassword = dbUserData.checkPassword(req.body.password);
+
+        if (!validPassword) {
+            res.status(400).json({ message: 'Incorrect password!' });
+            return;
+        }
+        req.session.save(() => {
+            req.session.admin = true;
+            req.session.username = dbUserData.username;
+            req.session.username = dbUserData.username;
+            req.session.loggedIn = true;
+
+            res.json({ user: dbUserData, message: 'You are now logged in as ADMIN!' });
+
+        });
+
+    });
+});
+
 
 
 module.exports = router;
