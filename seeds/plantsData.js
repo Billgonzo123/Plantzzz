@@ -27,6 +27,7 @@ const plantsdata = [
         difficulty: 'Easy',
         soil: 'Soil Description',
         temp: '70F'
+        
     }
 ]
 const seedPlantsData = () => Plants.bulkCreate(plantsdata);
