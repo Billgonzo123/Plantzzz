@@ -55,7 +55,7 @@ router.get('/:id', (req, res) => {
 
 //GET all user plants by user_id
 router.get('/user/:id', (req, res) => {
-    UserPlants.findOne({
+    UserPlants.findAll({
         where: {
             user_id: req.params.id
         },
