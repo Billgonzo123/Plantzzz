@@ -3,7 +3,7 @@ const { Plants } = require('../models');
 const plantsdata = [
     {
         common_name: 'African Violet',
-        botanical_name: 'Aloe barbadensis',
+        botanical_name: 'Saintpaulia',
         light: 'Bright/Indirect',
         watering_interval: 14,
         difficulty: 'Easy',
