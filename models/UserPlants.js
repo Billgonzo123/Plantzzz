@@ -14,6 +14,7 @@ UserPlants.init(
         },
         nickname: {
             type: DataTypes.STRING,
+            unique: true,
             allowNull: false
         },
         user_id: {
