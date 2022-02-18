@@ -28,6 +28,7 @@ router.get('/', async (req, res) => {
 
    // res.render('homepage', { plants, users, userPlants });
    res.render('test', { plants, users, userPlants });
+
 });
 
 module.exports = router;
