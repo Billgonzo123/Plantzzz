@@ -39,6 +39,10 @@ Plants.init(
         temp: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        pet_safe: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
         }
     },
     {
