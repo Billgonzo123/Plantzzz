@@ -23,7 +23,6 @@ const plantsdata = [
         pet_safe: false,
     }
     ,
-    ,
     {
         common_name: 'Areca Palm Tree',
         botanical_name: 'Dypsis lutescens',
