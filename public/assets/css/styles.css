@@ -18,22 +18,70 @@ h1 {
     font-weight: 100;
 }
 
+p {
+    font-family: var(--main-font);
+    font-size: 18px;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+li {
+    font-family: var(--main-font);
+    font-size: 24px;
+    font-weight: 100;
+}
+
+a:hover {
+    color: rgb(111, 111, 111);
+}
+
 .account-icon {
     width: 60px;
     height: 60px;
     margin: 20px 0px 0px 20px;
     background: #145F5A;
+    color: #fff;
+    font-size: 36px;
+    padding-top: 10px;
+    font-family: var(--main-font);
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
     border-radius: 50%;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.account-icon p {
-    color: #fff;
-    font-size: 36px;
-    padding-top: 10px;
-    font-family: var(--main-font);
+.menu {
+    position: relative;
+    display: inline-block;
 }
+
+.menu-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(113,113,113,0.8);
+    border-radius: 5px;
+    margin: 0px 5px 0px 10px;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.menu-content a {
+    color: #fff;
+    font-family: var(--main-font);
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+.menu-content a:hover {color: rgb(208, 208, 208);}
+
+/* Show the dropdown menu on hover */
+.menu:hover .menu-content {display: block;}
