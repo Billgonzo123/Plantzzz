@@ -14,6 +14,22 @@ const isAdmin = (req, res, next) => {
     } else {
         next();
     }
-}
+};
 
-module.exports = {withAuth, isAdmin};
+       //This is a test session. delete this code when login functionality is available
+const testSession =  (req, res, next) => {
+
+ req.session.save(() => {
+    req.session.user_id = 1;
+    req.session.username = 'User 1';
+    req.session.loggedIn = true;
+ 
+    console.log( 'message: You are now logged in as a test user!' );
+ next();
+ });
+
+
+}
+ ////------end test session login-----//
+
+module.exports = {withAuth, isAdmin, testSession};

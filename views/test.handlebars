@@ -32,15 +32,14 @@ I created this as a template to start server projects more easily and to wrap my
 </p>
 {{/each}}
 
-<P>-------Users---------</P>
-{{#each users as |user|}}
+<P>-------Logged in User---------</P>
 
 <p>
     {{user.username}} </br>
     {{user.email}} </br>
     {{user.password}} </br>
-    </p>
-{{/each}}
+</p>
+
 
 <P>--------User Plants--------</P>
 {{#each userPlants as |userPlant|}}
