@@ -5,7 +5,6 @@ This repo is set up to use express framework for creating web apps. </br>
 It uses mySQL and Sequelize to create databases. </br> 
 The server.js file is set up to be served on heroku or locally. </br> 
 I created this as a template to start server projects more easily and to wrap my head around what this code is actually doing.
-
 </p>
 
 <p>
@@ -50,6 +49,8 @@ I created this as a template to start server projects more easily and to wrap my
      user ID: {{userPlant.user_id}}</br>
      Initial water date: {{userPlant.initial_water_date}} </br>
      Days between waterings: {{userPlant.watering_interval}} </br>
+       Common_name: {{userPlant.plant.common_name}} </br>
+         Username: {{userPlant.user.username}} </br>
 </p>
 {{/each}}
 

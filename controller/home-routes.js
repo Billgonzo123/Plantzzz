@@ -7,26 +7,28 @@ router.get('/', async (req, res) => {
    const dbPlants = await Plants.findAll();
    const plants = dbPlants.map(plant => plant.get({ plain: true }));
 
-
    const dbUsers = await Users.findAll();
    const users = dbUsers.map(data => data.get({ plain: true }));
-
-
 
    const dbUserPlants = await UserPlants.findAll({
       include: [
          {
             model: Plants,
             attributes: ['common_name']
+         },
+         {
+            model: Users,
+            attributes: ['username']
          }
       ]
    });
+
    const userPlants = dbUserPlants.map(data => data.get({ plain: true }));
 
    // simply render the handlebars file homePage
    //this will render homepage INSIDE main.handlebars at {{{body}}}
 
-   // res.render('homepage', { plants, users, userPlants });
+   //res.render('homepage', { plants, users, userPlants });
    res.render('test', { plants, users, userPlants });
 
 });
