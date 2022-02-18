@@ -2,10 +2,6 @@ const router = require('express').Router();
 const getDB = require('../utils/getDB')
 const { withAuth, testSession } = require('../utils/auth');
 
-//get plant add page 
-router.get('/', testSession, withAuth, async (req, res) => {
-    res.json({message: 'This will be the plant ADD USER PLANT page.'})
-})
 
 // GET plant edit page'/add-edit/id'
 router.get('/:userPlantId', testSession, withAuth, async (req, res) => {
@@ -17,7 +13,6 @@ router.get('/:userPlantId', testSession, withAuth, async (req, res) => {
             console.log('---------No plant found under this ID for the currently logged in user---------')
             res.redirect('/');
         } else {
-          
             res.json({message: 'User plant found! This will be the plant EDIT USER PLANT page.'})
         }
 })

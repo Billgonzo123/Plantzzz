@@ -77,7 +77,7 @@ router.post('/', isAdmin, (req, res) => {
 
 //UPDATE plant in Plnats table
 router.put('/:id', isAdmin, (req, res) => {
-//expects the same datat from above create
+//expects the same data from above create
     Plants.update(req.body, {
         where: {
             id: req.params.id
