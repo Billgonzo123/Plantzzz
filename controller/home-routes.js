@@ -1,16 +1,26 @@
 const router = require('express').Router();
+const { withAuth } = require('../utils/auth');
 const { Plants, Users, UserPlants } = require('../models');
 
-router.get('/', async (req, res) => {
-   console.log('SUCCESS!!"');
-   //load all plant data
+router.get('/', withAuth, async (req, res) => {
+
+   //load all plant data 
    const dbPlants = await Plants.findAll();
    const plants = dbPlants.map(plant => plant.get({ plain: true }));
 
-   const dbUsers = await Users.findAll();
+   //get single user data
+   const dbUsers = await Users.findOne({
+      where: {
+         id: req.session.user_id
+      }
+   });
+
    const users = dbUsers.map(data => data.get({ plain: true }));
 
    const dbUserPlants = await UserPlants.findAll({
+      where: {
+         user_id: req.session.user_id
+      },
       include: [
          {
             model: Plants,
