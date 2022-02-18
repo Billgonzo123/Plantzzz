@@ -1,4 +1,5 @@
 :root {
+    --title-font: 'Alata', sans-serif;
     --main-font: 'Biryani', sans-serif;
 }
 
@@ -9,6 +10,12 @@ body {
 header {
     margin-bottom: 40px;
     position: fixed;
+}
+
+h1 {
+    font-family: var(--title-font);
+    font-size: 64px;
+    font-weight: 100;
 }
 
 .account-icon {

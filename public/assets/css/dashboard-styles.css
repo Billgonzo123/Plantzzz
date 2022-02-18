@@ -1,3 +1,8 @@
+:root {
+    --title-font: 'Alata', sans-serif;
+    --main-font: 'Biryani', sans-serif;
+}
+
 main {
     display: flex;
     flex-direction: row;
@@ -28,6 +33,14 @@ main {
     justify-content: center;
 }
 
+.add-plant {
+    font-family: var(--main-font);
+    font-size: 36px;
+    text-decoration: none;
+    color: #000;
+ 
+}
+
 .schedule {
     width: 30vw;
     height: 100vh;
@@ -35,6 +48,7 @@ main {
     display: flex;
     flex-direction: column;
     flex: 1;
+    align-items: center;
     background: #F6EEE1;
 }
 
