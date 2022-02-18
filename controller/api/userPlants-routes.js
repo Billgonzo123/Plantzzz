@@ -112,6 +112,7 @@ router.get('/user/:id', (req, res) => {
         })
 });
 
+
 //POST new user plant api/userPlants
 router.post('/', withAuth, (req, res) => {
     //does not expect users ID. Myst be logged in so it grabs the user ID from the session
