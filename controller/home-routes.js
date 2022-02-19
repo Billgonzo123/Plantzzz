@@ -26,7 +26,8 @@ router.get('/', async (req, res) => {
    // simply render the handlebars file homePage
    //this will render homepage INSIDE main.handlebars at {{{body}}}
 
-   res.render('homepage', { plants, users, userPlants });
+   // res.render('homepage', { plants, users, userPlants });
+   res.render('login', { plants, users, userPlants });
    // res.render('test', { plants, users, userPlants });
 
 });
