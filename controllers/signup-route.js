@@ -4,8 +4,7 @@ const router = require('express').Router();
 router.get('/', (req, res) => {
     console.log('SignUp route');
     const signup = true;
-    res.json({message: 'This will be the SIGNUP page'}); // <------ REMOVE THIS LINE WHEN HANDLEBARS PAGE IS READY
-    res.render('login', signup);
+    res.render('login', {signup});
 })
 
 module.exports = router;

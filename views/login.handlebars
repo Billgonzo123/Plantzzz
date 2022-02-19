@@ -3,32 +3,12 @@
         <h1>Plantzzz</h1>
     </div>
 
-    <div id="login" class="container">
-        <h2 class="login-title">Login</h2>
-        <div class="login-form">
-            <form method="post">
-                <div class="form-field">
-                    <label for="login-username">Username</label>
-                    <input id="login-username" type="text" class="form-input" placeholder="Enter email address"
-                        required>
-                </div>
-                <div class="form-field">
-                    <label for="login-password">Password</label>
-                    <input id="login-password" type="password" class="form-input" placeholder="Enter password" required>
-                </div>
-                <div class="form-field login-submit">
-                    <input type="submit" value="Log In Now">
-                </div>
-            </form>
-        </div>
-        <a class="login-link" href="#">Sign Up</a>
-    </div>
-
+{{#if signup}}
 
 <div id="login" class="container">
         <h2 class="login-title">Signup</h2>
         <div class="login-form">
-            <form method="post">
+            <form class="signup-form">
                 <div class="form-field">
                     <label for="firstName">First Name</label>
                     <input id="firstName" type="text" class="form-input" placeholder="Enter first name"
@@ -55,7 +35,31 @@
                 </div>
             </form>
         </div>
-        <a class="login-link" href="#">Log In Instead</a>
+        <a class="login-link" href="/login">Log In Instead</a>
     </div>
-
+{{else}}
+    <div id="login" class="container">
+        <h2 class="login-title">Login</h2>
+        <div class="login-form">
+            <form class="login-form">
+                <div class="form-field">
+                    <label for="login-email">Email</label>
+                    <input id="login-email" type="text" class="form-input" placeholder="Enter email address"
+                        required>
+                </div>
+                <div class="form-field">
+                    <label for="login-password">Password</label>
+                    <input id="login-password" type="password" class="form-input" placeholder="Enter password" required>
+                </div>
+                <div class="form-field login-submit">
+                    <input type="submit" value="Log In Now">
+                </div>
+            </form>
+        </div>
+        <a class="login-link" href="/signup">Sign Up</a>
+    </div>
+{{/if}}
 </div>
+<script src="/javascript/login.js"></script>
+
+

@@ -33,7 +33,12 @@ const { Plants, Users, UserPlants } = require('../models');
         //return all the data
     
         const firstLetter = user.username.split('')[0];
-     return { plants, user, userPlants, firstLetter };
+
+
+        const loggedIn = req.session.loggedIn;
+
+        
+     return { plants, user, userPlants, firstLetter, loggedIn };
     };
     
 module.exports = getDB;
