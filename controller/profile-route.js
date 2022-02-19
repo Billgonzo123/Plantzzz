@@ -11,7 +11,7 @@ const userPlant = userPlants.find(e => e.id == req.params.userPlantId)
         console.log('The current logged in user does not have a plant by this id');
         res.redirect('/');
     } else {
-        res.json({message: 'User plant found! This will be the plant profile page.'});
+        res.json({message: 'User plant found! This will be the plant profile page.'});// <------ REMOVE THIS LINE WHEN HANDLEBARS PAGE IS READY
         res.render('plant-profile',{ plants, user, userPlant})
     }
 });
