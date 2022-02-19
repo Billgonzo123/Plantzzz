@@ -174,7 +174,7 @@ router.post('/login/admin', (req, res) => {
         }
         req.session.save(() => {
             req.session.admin = true;
-            req.session.username = dbUserData.username;
+            req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
             req.session.loggedIn = true;
 

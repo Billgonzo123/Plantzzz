@@ -16,19 +16,17 @@ const isAdmin = (req, res, next) => {
     }
 };
 
-       //This is a test session. delete this code when login functionality is available
-const testSession =  (req, res, next) => {
+
+const testSession =  (req, res, next) => { // <------This is a test session. delete this code and where they appear in the routes when login functionality is available
 
  req.session.save(() => {
-    req.session.user_id = 1;
-    req.session.username = 'User 1';
+    req.session.user_id = 1; //<--- change this to change the id of the test user
+    req.session.username = 'User 1'; 
     req.session.loggedIn = true;
  
     console.log( 'message: You are now logged in as a test user!' );
  next();
  });
-
-
 }
  ////------end test session login-----//
 
