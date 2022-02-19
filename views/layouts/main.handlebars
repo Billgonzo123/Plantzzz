@@ -17,12 +17,14 @@
   <body>
     <header>
       <nav>
+        {{#if loggedIn}}
         <div class="menu">
           <button class="account-icon">{{firstLetter}}</button>
           <div class="menu-content">
             <a href="#">Logout</a>
           </div>
         </div>
+        {{/if}}
       </nav>
     </header>
     <!--below is where handlebars will render views with res.render()-->

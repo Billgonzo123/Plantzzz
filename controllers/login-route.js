@@ -1,9 +1,18 @@
 const router = require('express').Router();
 
-// '/api/login'
-router.get('/', (req, res) => {
+// '/login'
+router.get('/', async (req, res) => {
     console.log('LOGIN route');
-    res.render('login');
+    const loggedIn = req.session.loggedIn;
+    console.log(req.session.username);
+
+    let firstLetter = false;
+
+    if (req.session.username) {
+        firstLetter = req.session.username.split('')[0];
+    }
+    
+    res.render('login', { firstLetter, loggedIn });
 })
 
 module.exports = router;
