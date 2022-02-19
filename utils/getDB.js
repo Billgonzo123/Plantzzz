@@ -31,7 +31,9 @@ const { Plants, Users, UserPlants } = require('../models');
         });
         const userPlants = dbUserPlants.map(data => data.get({ plain: true }));
         //return all the data
-     return { plants, user, userPlants };
+    
+        const firstLetter = user.username.split('')[0];
+     return { plants, user, userPlants, firstLetter };
     };
     
 module.exports = getDB;
