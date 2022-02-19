@@ -21,7 +21,7 @@
         <div class="menu">
           <button class="account-icon">{{firstLetter}}</button>
           <div class="menu-content">
-            <a href="#">Logout</a>
+            <a id="logout" href="/login">Logout</a>
           </div>
         </div>
         {{/if}}
@@ -30,4 +30,7 @@
     <!--below is where handlebars will render views with res.render()-->
     {{{body}}}
   </body>
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+{{/if}}
 </html>

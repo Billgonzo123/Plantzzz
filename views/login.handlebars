@@ -10,8 +10,8 @@
         <div class="login-form">
             <form class="signup-form">
                 <div class="form-field">
-                    <label for="firstName">First Name</label>
-                    <input id="firstName" type="text" class="form-input" placeholder="Enter first name"
+                    <label for="first-name">First Name</label>
+                    <input id="first-name" type="text" class="form-input" placeholder="Enter first name"
                         required>
                 </div>
                 <div class="form-field">
@@ -37,6 +37,7 @@
         </div>
         <a class="login-link" href="/login">Log In Instead</a>
     </div>
+<script src="/javascript/signup.js"></script>
 {{else}}
     <div id="login" class="container">
         <h2 class="login-title">Login</h2>
@@ -58,8 +59,9 @@
         </div>
         <a class="login-link" href="/signup">Sign Up</a>
     </div>
+    <script src="/javascript/login.js"></script>
 {{/if}}
 </div>
-<script src="/javascript/login.js"></script>
+
 
 
