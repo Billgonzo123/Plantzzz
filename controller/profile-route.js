@@ -12,6 +12,7 @@ const userPlant = userPlants.find(e => e.id == req.params.userPlantId)
         res.redirect('/');
     } else {
         res.json({message: 'User plant found! This will be the plant profile page.'});
+        res.render('plant-profile',{ plants, user, userPlant})
     }
 });
 
