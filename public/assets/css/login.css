@@ -1,3 +1,8 @@
+:root {
+    --title-font: 'Alata', sans-serif;
+    --main-font: 'Biryani', sans-serif;
+}
+
 html {
     height: 100%;
 }
@@ -17,11 +22,6 @@ html {
     flex-direction: column;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
 .logo { 
     text-align: center;
 }
@@ -29,16 +29,47 @@ form {
 .logo h1 {
     font-size: 144px;
     font-weight: 100;
-    margin: 45px 0px 45px 0px;
+    margin: auto;
 }
 
 .login-title, .login-link {
     text-align: center;
+    margin: auto;
 }
 
-.login-item {
-    color: #fff;
-    padding: 25px 25px 0;
-    margin: 20px 20px 0;
-    border-radius: 3px;
+form {
+    display: flex;
+    flex-direction: column;
 }
+
+input {
+    border: 0;
+    border-radius: 5px;
+    font-family: var(--main-font);
+    width: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+  }
+
+.form-field p {
+    margin-block-end: auto;
+}
+
+.login-submit {
+    padding: 10px 0px 10px 0px;
+    margin-top: 2rem;
+}
+
+.login-submit input {
+    background-color: #67B46E;
+    color: #fff;
+}
+
+.login-submit input:hover {
+    background-color: #b5e4b9;
+    color: #fff;
+}
+
+
+  
