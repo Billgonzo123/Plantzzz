@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-// '/login'
+// '/api/login'
 router.get('/', (req, res) => {
     console.log('LOGIN route');
     res.render('login');

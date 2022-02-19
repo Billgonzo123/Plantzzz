@@ -3,7 +3,7 @@ const getDB = require('../utils/getDB');
 const { withAuth, testSession } = require('../utils/auth');
 
 // '/plant-profile'
-router.get('/:userPlantId',testSession, withAuth, async (req, res) => {
+router.get('/:userPlantId', withAuth, async (req, res) => {
 const { plants, user, userPlants, firstLetter } = await getDB(req);
 //send this variable to the view. Gets the requested user plant from the array of user plants
 const userPlant = userPlants.find(e => e.id == req.params.userPlantId);
