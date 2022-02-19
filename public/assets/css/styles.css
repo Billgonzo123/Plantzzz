@@ -18,9 +18,19 @@ h1 {
     font-weight: 100;
 }
 
+h2 {
+    font-family: var(--main-font);
+    font-size: 36px;
+    font-weight: 100;
+}
+
 p {
     font-family: var(--main-font);
     font-size: 18px;
+}
+
+a {
+    font-family: var(--main-font);
 }
 
 ul {
