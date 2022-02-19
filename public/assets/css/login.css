@@ -47,13 +47,14 @@ input {
     border-radius: 5px;
     font-family: var(--main-font);
     width: 100%;
-    margin: 0;
+    margin: 10px 0px 10px 0px;
     outline: 0;
     padding: 10px;
+    background-color: #E9E8E8;
   }
 
-.form-field p {
-    margin-block-end: auto;
+label {
+    font-family: var(--main-font);
 }
 
 .login-submit {
