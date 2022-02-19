@@ -1,10 +1,11 @@
 async function loginFormHandler(event) {
     event.preventDefault();
 
-    const email = document.querySelector('#login-email').value.trim();
-    const password = document.querySelector('#login-password').value.trim();
+    if (document.querySelector('#login-email') && document.querySelector('#login-password')) {
+        
+        const email = document.querySelector('#login-email').value.trim();
+        const password = document.querySelector('#login-password').value.trim();
 
-    if (email && password) {
         const response = await fetch('/api/users/login', {
             method: 'post',
             body: JSON.stringify({
@@ -15,7 +16,6 @@ async function loginFormHandler(event) {
         });
 
         if (response.ok) {
-            console.log('are you here?');
             document.location.replace('/');
         } else {
             alert(response.statusText);
@@ -36,8 +36,8 @@ async function signupFormHandler(event) {
         const response = await fetch('/api/users', {
             method: 'post',
             body: JSON.stringify({
-                firstName,
-                lastName,
+                first_name: firstName,
+                last_name: lastName,
                 username,
                 email,
                 password
@@ -47,6 +47,7 @@ async function signupFormHandler(event) {
         
         if (response.ok) {
             console.log('success');
+            document.location.replace('/login');
         } else {
             alert(response.statusText);
         }
