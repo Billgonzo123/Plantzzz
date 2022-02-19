@@ -4,7 +4,7 @@ const { withAuth, testSession } = require('../utils/auth');
 
 // GET plant edit page'/edit/id'
 router.get('/:userPlantId', testSession, withAuth, async (req, res) => {
-    const { plants, user, userPlants } = await getDB(req);
+    const { plants, user, userPlants, firstLetter } = await getDB(req);
     //send this variable to the view
     const userPlant = userPlants.find(e => e.id == req.params.userPlantId)
 
@@ -13,7 +13,7 @@ router.get('/:userPlantId', testSession, withAuth, async (req, res) => {
         res.redirect('/');
     } else {
         res.json({ message: 'User plant found! This will be the plant EDIT USER PLANT page.' })// <------ REMOVE THIS LINE WHEN HANDLEBARS PAGE IS READY
-        res.render('add-edit-page', { plants, user, userPlant })
+        res.render('add-edit-page', { plants, user, userPlant, firstLetter })
     }
 })
 
