@@ -30,6 +30,4 @@ router.get('/signedup', async (req, res) => {
     res.render('login', { firstLetter, loggedIn, signedUp });
 })
 
-
-
 module.exports = router;
