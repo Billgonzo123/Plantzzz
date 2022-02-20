@@ -22,9 +22,9 @@ async function signupFormHandler(event) {
         
         if (response.ok) {
             console.log('success');
-            document.location.replace('/login');
+            document.location.replace('/login/signedup');
         } else {
-            alert(response.statusText);
+            alert("Email or Username already exists ");
         }
     }
 }

@@ -32,7 +32,7 @@ html {
     margin: auto;
 }
 
-.login-title, .login-link {
+.login-title, .login-link, .signup-success {
     text-align: center;
     margin: auto;
 }
@@ -74,3 +74,17 @@ label {
 
 
   
+
+.signup-success {
+    font-family: var(--main-font);
+    font-size: 10;
+    animation: fadeIn 3s;
+}
+
+/* animation keyframes */
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+    }
+}

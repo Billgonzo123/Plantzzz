@@ -4,62 +4,10 @@
     </div>
 
 {{#if signup}}
+{{>signup-partial}}
 
-<div id="login" class="container">
-        <h2 class="login-title">Signup</h2>
-        <div class="login-form">
-            <form class="signup-form">
-                <div class="form-field">
-                    <label for="first-name">First Name</label>
-                    <input id="first-name" type="text" class="form-input" placeholder="Enter first name"
-                        required>
-                </div>
-                <div class="form-field">
-                    <label for="last-name">Last Name</label>
-                    <input id="last-name" type="text" class="form-input" placeholder="Enter last name" required>
-                </div>
-                <div class="form-field">
-                    <label for="username">Username</label>
-                    <input id="username" type="text" class="form-input" placeholder="Enter last name" required>
-                </div>
-                <div class="form-field">
-                    <label for="email">Email</label>
-                    <input id="email" type="text" class="form-input" placeholder="Enter email" required>
-                </div>
-                <div class="form-field">
-                    <label for="password">Password</label>
-                    <input id="password" type="password" class="form-input" placeholder="Enter password" required>
-                </div>
-                <div class="form-field login-submit">
-                    <input type="submit" value="Continue">
-                </div>
-            </form>
-        </div>
-        <a class="login-link" href="/login">Log In Instead</a>
-    </div>
-<script src="/javascript/signup.js"></script>
 {{else}}
-    <div id="login" class="container">
-        <h2 class="login-title">Login</h2>
-        <div class="login-form">
-            <form class="login-form">
-                <div class="form-field">
-                    <label for="login-email">Email</label>
-                    <input id="login-email" type="text" class="form-input" placeholder="Enter email address"
-                        required>
-                </div>
-                <div class="form-field">
-                    <label for="login-password">Password</label>
-                    <input id="login-password" type="password" class="form-input" placeholder="Enter password" required>
-                </div>
-                <div class="form-field login-submit">
-                    <input type="submit" value="Log In Now">
-                </div>
-            </form>
-        </div>
-        <a class="login-link" href="/signup">Sign Up</a>
-    </div>
-    <script src="/javascript/login.js"></script>
+   {{>login-partial}}
 {{/if}}
 </div>
 
