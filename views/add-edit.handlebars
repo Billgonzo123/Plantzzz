@@ -1,0 +1,68 @@
+
+<div class="add-edit">
+    <div class="container-left">
+            <div class="heading">
+        <h1>Add / Edit Plant</h1>
+    </div>
+    <div class="container">
+        <div class="card edit-card">
+            <img src="/assets/img/aloe_vera.jpg" alt="">
+        </div>
+    </div>
+    </div>
+    <div class="container-right">
+        <div class="login-form">
+            <form id="edit-form">
+                <div class="form-field">
+                    <label for="select-plant">Select Plant</label>
+                    <select name="select-plants" id="select-plants">
+                        <option value="option 1">Spider</option>
+                        <option value="option 1">Aloe Vera</option>
+                        <option value="option 1">African Violet</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="plant-nickname">Plant Nickname</label>
+                    <input id="plant-nickname" type="text" class="form-input" placeholder="James the Giant Jade"
+                        required>
+                </div>
+                <div class="form-field">
+                    <label for="last-watered">Date Plant Last Watered</label>
+                    <input id="last-watered" type="date" class="form-input" required>
+                </div>
+                <label for="watering-frequency">Watering Frequency</label>
+                <div class="frequency">
+                    <div>
+                        <p>Every</p>
+                    </div>
+                    <div class="form-field">
+                        <input class="frequency-number" type="number" class="form-input" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="frequency-multiplier"></label>
+                        <select name="frequency-multiplier" class="multiplier">
+                            <option value="1">Days</option>
+                            <option value="7">Weeks</option>
+                            <option value="30">Months</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="notes">Notes</label>
+                    <textarea form="edit-form" name="notes">Add a note here...</textarea>
+                </div>
+
+                <div class="edit-buttons">
+                    <div class="form-field delete">
+                        <input type="submit" value="delete">
+                    </div>
+                    <div class="form-field cancel">
+                        <input type="submit" value="cancel">
+                    </div>
+                    <div class="form-field submit">
+                        <input type="submit" value="Save">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>

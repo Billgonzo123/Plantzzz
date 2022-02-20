@@ -54,6 +54,28 @@ a:hover {
     color: rgb(111, 111, 111);
 }
 
+.submit input {
+    background-color: #67B46E;
+    color: #fff;
+    width: 100;
+}
+
+.cancel input {
+    background-color: #227A9F;
+    color: #fff;
+    width: 100;
+}
+
+.delete input {
+    background-color: #D3705B;
+    color: #fff;
+    width: 100;
+}
+
+.submit:hover, .cancel:hover, .delete:hover {
+    opacity: 75%;
+}
+
 .account-icon {
     width: 60px;
     height: 60px;
