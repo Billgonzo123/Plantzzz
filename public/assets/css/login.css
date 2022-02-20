@@ -37,11 +37,6 @@ html {
     margin: auto;
 }
 
-.signup-success {
-    font-family: var(--main-font);
-    font-size: 10;
-    animation: fadeIn 3s;
-}
 
 form {
     display: flex;
@@ -78,6 +73,12 @@ label {
     color: #fff;
 }
 
+
+.signup-success {
+    font-family: var(--main-font);
+    font-size: 10;
+    animation: fadeIn 3s;
+}
 
 /* animation keyframes */
 
