@@ -12,8 +12,7 @@ router.get('/:userPlantId', withAuth, async (req, res) => {
         console.log('---------No plant found under this ID for the currently logged in user---------');
         res.redirect('/');
     } else {
-        res.json({ message: 'User plant found! This will be the plant EDIT USER PLANT page.' })// <------ REMOVE THIS LINE WHEN HANDLEBARS PAGE IS READY
-        res.render('add-edit-page', { plants, user, userPlant, firstLetter, loggedIn });
+        res.render('add-edit', { plants, user, userPlant, firstLetter, loggedIn });
     }
 })
 

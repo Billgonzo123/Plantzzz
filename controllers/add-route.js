@@ -6,8 +6,7 @@ const { withAuth, testSession } = require('../utils/auth');
 //get plant add page 
 router.get('/', withAuth, async (req, res) => {
     const { plants, user, firstLetter, loggedIn } = await getDB(req);
-    res.json({ message: 'This will be the plant ADD USER PLANT page.' })// <------ REMOVE THIS LINE WHEN HANDLEBARS PAGE IS READY
-    res.render('add-edit-page', { plants, user, firstLetter, loggedIn });
+    res.render('add-edit', { plants, user, firstLetter, loggedIn });
 })
 
 module.exports = router;

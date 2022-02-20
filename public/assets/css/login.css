@@ -42,7 +42,7 @@ form {
     flex-direction: column;
 }
 
-input {
+input, select, textarea {
     border: 0;
     border-radius: 5px;
     font-family: var(--main-font);

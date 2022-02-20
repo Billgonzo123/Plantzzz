@@ -1,0 +1,27 @@
+select {
+    width: 100%;
+}
+
+.frequency {
+    display: flex;
+    justify-content: space-between;
+}
+
+.frequency-number {
+    width: 30%;
+    align-self: center;
+}
+
+.frequency-multiplier {
+    width: 70%;
+}
+
+.edit-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.edit-delete, .edit-cancel, .edit-save {
+    width: 30%;
+}
