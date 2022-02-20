@@ -16,7 +16,7 @@
 }
 
 .container-right {
-    padding-top: 150px;
+    padding-top: 125px;
 }
 
 .edit-card {
@@ -26,7 +26,7 @@
 }
 
 .edit-card img {
-    width: inherit;
+    width: -webkit-fill-available;
 }
 
 select {
@@ -35,7 +35,11 @@ select {
 
 .frequency {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+
+.frequency label {
+    font-size: 11px;
 }
 
 .frequency-number {
