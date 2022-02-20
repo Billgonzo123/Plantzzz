@@ -1,0 +1,16 @@
+#taskDiv {
+    background-color: aliceblue;
+    text-align: center;
+    overflow: scroll;
+    border: 5px solid black;
+    border-radius: 15px;
+    margin: 30px;
+}
+
+#taskListItem {
+    background-color:aquamarine;
+    margin: 3px;
+    border: 2px solid rgb(88, 52, 52);
+    border-radius: 15px;
+    width: 28vw;
+}

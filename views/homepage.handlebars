@@ -28,8 +28,12 @@
   <div class="schedule">
     <h1>Schedule</h1>
     <!-- This is where we'll add Schedule list item logic -->
+    {{#if userPlants.length}}
+    {{> list-items userPlants}}
+    {{else}}
     <ul>
       <li>No Tasks</li>
     </ul>
+    {{/if}}
   </div>
 </main>

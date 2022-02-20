@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/assets/css/tasks.css" />
+
+<div id="taskDiv">
+    <ul>
+        {{#each (renderUserPlants this)}}
+        <li id="taskListItem">
+            <p id="taskDate">{{date}}</p>
+            {{#each plants as |plant|}}
+            <p id="taskPlant">{{plant}}</p>
+            {{/each}}
+            {{/each}}
+        </li>
+    </ul>
+</div>
