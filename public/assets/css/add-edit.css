@@ -1,3 +1,34 @@
+.add-edit {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    min-height: 100%;
+}
+
+.container-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    overflow: hidden;
+}
+
+.container-right {
+    padding-top: 150px;
+}
+
+.edit-card {
+    width: 98%;
+    height: 98%;
+    overflow: hidden;
+}
+
+.edit-card img {
+    width: inherit;
+}
+
 select {
     width: 100%;
 }
@@ -24,4 +55,30 @@ select {
 
 .edit-delete, .edit-cancel, .edit-save {
     width: 30%;
+}
+
+@media only screen and (max-width: 850px){
+	.add-edit {
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .container {
+        align-items: center;
+    }
+
+    .container-left {
+        margin-top: 75px;
+        align-items: center;
+    }
+
+    .container-right {
+        padding-top: 0px;
+    }
+
+    .edit-card {
+        width: 350px;
+        height: 350px;
+    }
 }
