@@ -7,7 +7,7 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const helpers = require('./utils/helpers');
 //this allows helpers to be used in handlebars
-const hbs = exphbs.create({helpers});
+const hbs = exphbs.create({ helpers });
 
 const session = require('express-session');
 const {Users} = require('./models')
@@ -25,19 +25,21 @@ const sess = {
   })
 }
 
-
 const app = express();
+
 //sets port for heroku if that is where app is being served
 const PORT = process.env.PORT || 3001;
+
+//config handle bars for use in express
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 app.use(session(sess));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 //sets the public folder to static
 app.use(express.static(path.join(__dirname, 'public')));
-//config handle bars for use in express
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
 
 // turn on routes
 app.use(routes);

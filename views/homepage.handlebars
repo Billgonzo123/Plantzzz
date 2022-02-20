@@ -1,14 +1,29 @@
 <main>
   <div class="plant-grid">
     <div class="card">
-      <a class="add-plant"href="#">+ Add Plant</a>
+      <a class="add-plant" href="#">+ Add Plant</a>
     </div>
+
+    {{#if userPlants.length}}
+
+    {{#each userPlants as |userPlant|}}
+
+    {{> plant-card userPlant}}
+
+    {{/each}}
+
+    {{else}}
+
     <div class="card">
     </div>
     <div class="card">
     </div>
     <div class="card">
     </div>
+  </div>
+
+  {{/if}}
+
   </div>
   <div class="schedule">
     <h1>Schedule</h1>

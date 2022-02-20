@@ -1,0 +1,21 @@
+.plant-card {
+    position: relative;
+    overflow: hidden;
+    border-style: none;
+}
+
+.plant-card img {
+    width: 100%;
+}
+
+.good {
+    background-color: #83C195;
+}
+
+.fair {
+    background-color: #E8C751;
+}
+
+.water {
+    background-color: #D3705B;
+}
