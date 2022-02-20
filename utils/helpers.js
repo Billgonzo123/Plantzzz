@@ -8,7 +8,13 @@ module.exports = {
 
     imageFile: commonName => {
         return commonName
-        .replace(' ','_')
+        .replace(/ /g,'_')
         .toLowerCase();
-      }
+      },
+
+    // getCurrentPlant: () => {
+    //   const plant = document.getElementById('select-plants').textContent;
+
+    //   return plant;
+    // }
 }

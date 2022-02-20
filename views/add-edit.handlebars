@@ -6,7 +6,7 @@
     </div>
     <div class="container">
         <div class="card edit-card">
-            <img src="/assets/img/aloe_vera.jpg" alt="">
+            <img id="plant-image" src="/assets/img/african_violet.jpg" alt="">
         </div>
     </div>
     </div>
@@ -15,10 +15,10 @@
             <form id="edit-form">
                 <div class="form-field">
                     <label for="select-plant">Select Plant</label>
-                    <select name="select-plants" id="select-plants">
-                        <option value="option 1">Spider</option>
-                        <option value="option 1">Aloe Vera</option>
-                        <option value="option 1">African Violet</option>
+                    <select name="select-plants" id="select-plant">
+                        {{#each plants}}
+                            <option id="selected-plant" value="{{id}}">{{common_name}}</option>
+                        {{/each}}
                     </select>
                 </div>
                 <div class="form-field">
@@ -32,32 +32,40 @@
                 </div>
                 <label for="watering-frequency">Watering Frequency</label>
                 <div class="frequency">
-                    <div>
-                        <p>Every</p>
+                    <div class="form-field">
+                        <label for="wf-value">Days</label>
+                        <select name="frequency-number" class="multiplier" id="wfVal" required>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
                     </div>
                     <div class="form-field">
-                        <input class="frequency-number" type="number" class="form-input" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="frequency-multiplier"></label>
-                        <select name="frequency-multiplier" class="multiplier">
-                            <option value="1">Days</option>
-                            <option value="7">Weeks</option>
-                            <option value="30">Months</option>
+                        <label for="frequency-multiplier">Weeks</label>
+                        <select name="frequency-multiplier" class="multiplier" id="wfMult">
+                            <option value="0">None</option>
+                            <option value="7">One</option>
+                            <option value="14">Two</option>
+                            <option value="21">Three</option>
+                            <option value="28">Four</option>
                         </select>
                     </div>
                 </div>
-                <div class="form-field">
-                    <label for="notes">Notes</label>
-                    <textarea form="edit-form" name="notes">Add a note here...</textarea>
-                </div>
 
                 <div class="edit-buttons">
+                    {{#if userPlant}}
                     <div class="form-field delete">
-                        <input type="submit" value="delete">
+                        <input type="submit" value="Delete" formnovalidate>
                     </div>
+                    {{/if}}
                     <div class="form-field cancel">
-                        <input type="submit" value="cancel">
+                        <a href="/">
+                            <input type="button" value="Cancel" formnovalidate>
+                        </a>
                     </div>
                     <div class="form-field submit">
                         <input type="submit" value="Save">
@@ -66,3 +74,4 @@
             </form>
         </div>
     </div>
+<script src="/javascript/add-plant.js"></script>
