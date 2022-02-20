@@ -7,7 +7,6 @@ module.exports = {
     // },
 
     imageFile: commonName => {
-        console.log(commonName);
         return commonName
         .replace(' ','_')
         .toLowerCase();
