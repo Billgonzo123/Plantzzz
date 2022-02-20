@@ -6,9 +6,9 @@
 
     {{#if userPlants.length}}
 
-    {{#each userPlants}}
+    {{#each userPlants as |userPlant|}}
 
-    {{> plant-card plant}}
+    {{> plant-card userPlant}}
 
     {{/each}}
 
