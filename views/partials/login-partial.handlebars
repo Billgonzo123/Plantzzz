@@ -1,0 +1,24 @@
+ <div id="login" class="container">
+        <h2 class="login-title">Login</h2p
+        {{#if signedUP}}
+          <h3 class="signup-success">Signup Successful!</h3>
+          {{/if}}
+        <div class="login-form">
+            <form class="login-form">
+                <div class="form-field">
+                    <label for="login-email">Email</label>
+                    <input id="login-email" type="text" class="form-input" placeholder="Enter email address"
+                        required>
+                </div>
+                <div class="form-field">
+                    <label for="login-password">Password</label>
+                    <input id="login-password" type="password" class="form-input" placeholder="Enter password" required>
+                </div>
+                <div class="form-field login-submit">
+                    <input type="submit" value="Log In Now">
+                </div>
+            </form>
+        </div>
+        <a class="login-link" href="/signup">Sign Up</a>
+    </div>
+    <script src="/javascript/login.js"></script>

@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
     if (req.session.username) {
         firstLetter = req.session.username.split('')[0];
     }
-    
+console.log(req.url)
     res.render('login', { firstLetter, loggedIn });
 })
 
