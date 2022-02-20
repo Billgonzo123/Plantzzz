@@ -37,7 +37,6 @@ html {
     margin: auto;
 }
 
-
 form {
     display: flex;
     flex-direction: column;
@@ -73,6 +72,8 @@ label {
     color: #fff;
 }
 
+
+  
 
 .signup-success {
     font-family: var(--main-font);
