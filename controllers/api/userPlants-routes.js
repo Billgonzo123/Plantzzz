@@ -112,6 +112,34 @@ router.get('/user/:id', (req, res) => {
         })
 });
 
+//GET all session user plants
+router.get('/session',withAuth, (req, res) => {
+    UserPlants.findAll({
+        where: {
+            user_id: req.session.user_id
+        },
+        include: [
+            {
+               model: Plants,
+               attributes: ['common_name']
+            },
+            {
+                model: Users,
+                attributes: ['username']
+             }
+         ]
+    }).then(dbUserPlantData => {
+        if (!dbUserPlantData) {
+            res.status(404).json({ message: 'User plants not found under that user_id' });
+        }
+        res.json(dbUserPlantData)
+    })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json;
+        })
+});
+
 
 //POST new user plant api/userPlants
 router.post('/', withAuth, (req, res) => {
