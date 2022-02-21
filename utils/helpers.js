@@ -13,8 +13,8 @@ module.exports = {
     for (i = 0; i < 14; i++) {
       let newDate = new Date();
       newDate.setDate(newDate.getDate() + i);
-
-      dates.push({ date: newDate.toLocaleDateString("en-US"), plants: [] });
+      const options = { year: 'numeric', month: 'short', day: 'numeric' };
+      dates.push({ date: newDate.toLocaleDateString("en-US", options), plants: [] });
 
       userPlants.forEach(plant => {
         //get inital water date
@@ -22,11 +22,10 @@ module.exports = {
         //get how many days since inital water date
         const diff = getDifferenceInDays(newDate, firstWaterDate);
         //if there is no remained, then current date is a day of watering
-        (diff % plant.watering_interval) ? false : dates[i].plants.push(plant.nickname);
+        (diff % plant.watering_interval) ? false : dates[i].plants.push('Water ' + plant.nickname);
       })
       if (!dates[i].plants.length) dates[i].plants.push('No Plants to Water');
     }
-    console.log(dates);
     return dates;
   }
 

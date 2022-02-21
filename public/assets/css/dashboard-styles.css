@@ -8,7 +8,10 @@ main {
     flex-direction: row;
 }
 
+
+
 .plant-grid {
+
     flex: 3;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -41,9 +44,8 @@ main {
  
 }
 
-.schedule, #taskDiv {
+.schedule {
     padding: 0px 20px 0px 20px;
-    width: 30vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -51,7 +53,13 @@ main {
     flex-basis: auto;
     align-items: center;
     background: #F6EEE1;
+
+    position: sticky;
+    align-self: flex-start;
+    top: 0;
 }
+
+
 
 @media only screen and (max-width: 1550px){
 

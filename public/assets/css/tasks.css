@@ -1,16 +1,47 @@
 #taskDiv {
-    background-color: aliceblue;
+    overflow: scroll; 
+    color: #565656;
+    width: 70%;
+    
+}
+.scheduleTitle
+{
+    margin-top: 0px;
+    border-bottom: 4px dotted  #565656; ; 
+    width: 100%;
     text-align: center;
-    overflow: scroll;
-    border: 5px solid black;
-    border-radius: 15px;
-    margin: 30px;
 }
 
-#taskListItem {
-    background-color:aquamarine;
-    margin: 3px;
-    border: 2px solid rgb(88, 52, 52);
-    border-radius: 15px;
-    width: 28vw;
+.todayDate {
+    margin: -20px 1px 10px 1px;
+    border-bottom: 4px dotted ;
+    font-weight: bold;
+    font-size: 38px;
+   
 }
+
+.taskDate {
+    margin: 30px 1px 10px 1px;
+    border-bottom: 4px dotted ;
+ 
+    font-weight: bold;
+    font-size: 38px;
+}
+
+#taskPlant {
+    margin: 1px 1px 1px 50px;
+    padding: 0px;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#taskDiv::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  #taskDiv {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
