@@ -57,7 +57,7 @@ a:hover {
 .submit input {
     background-color: #67B46E;
     color: #fff;
-    width: 100;
+    width: 100%;
 }
 
 .cancel input {
