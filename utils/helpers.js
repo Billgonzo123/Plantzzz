@@ -32,7 +32,7 @@ module.exports = {
         //if there is no remained, then current date is a day of watering
         (diff % plant.watering_interval) ? false : dates[i].plants.push('Water ' + plant.nickname);
       })
-      if (!dates[i].plants.length) dates[i].plants.push('No Plants to Water');
+  
     }
     return dates;
   }
