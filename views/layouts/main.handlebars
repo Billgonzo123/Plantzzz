@@ -20,6 +20,9 @@
   <body>
     <header>
       <nav>
+                    <a id="banner-link" href="/">
+      <h1 id="title-header">Plantzzz</h1>
+      </a>
         {{#if loggedIn}}
         <div class="menu">
           <button class="account-icon">{{firstLetter}}</button>
@@ -28,7 +31,9 @@
           </div>
         </div>
         {{/if}}
+  
       </nav>
+
     </header>
     <!--below is where handlebars will render views with res.render()-->
     {{{body}}}
