@@ -6,7 +6,7 @@ async function cancelFormHandler(event) {
 async function addPlantFormHandler(event) {
   event.preventDefault();
 
-  const userSelectPlant = document.querySelector("#select-plants").value.trim();
+  const userSelectPlant = document.querySelector("#select-plant").value.trim();
   const userSelectNickname = document
     .querySelector("#plant-nickname")
     .value.trim();
