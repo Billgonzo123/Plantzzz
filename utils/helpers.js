@@ -6,6 +6,14 @@ module.exports = {
     .replace(/ /g,'_')
     .toLowerCase();
   },
+
+  waterFreq: (interval, dayFlag) => {
+    const day = Math.round(interval % 7);
+    const week = Math.round(interval / 7);
+
+    return (dayFlag)? day : week;
+  },
+  
   //check userPlant for watering days
   renderUserPlants: (userPlants) => {
     let dates = [];

@@ -1,3 +1,18 @@
+.card-container {
+    position: relative;
+}
+
+.card-container i {
+    position: absolute;
+    top: 20;
+    right: 20;
+    color: #000
+}
+
+.card-container i:hover {
+    opacity: 60%;
+}
+
 .plant-card {
     position: relative;
     overflow: hidden;
