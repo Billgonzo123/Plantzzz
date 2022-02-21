@@ -45,3 +45,18 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+
+
+  @media only screen and (max-width: 1760px){
+    .scheduleTitle {
+        font-size: 28px;
+    }
+    .taskDate, .todayDate {
+        font-size: 20px;
+    } 
+    #taskPlant {
+        margin: 1px 1px 1px 20px;
+        font-size: 18px;
+    }
+  
+}
