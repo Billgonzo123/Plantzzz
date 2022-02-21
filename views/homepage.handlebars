@@ -1,4 +1,5 @@
 <main>
+
   <div class="plant-grid">
     <div class="card">
       <a class="add-plant" href="/add">+ Add Plant</a>
@@ -23,13 +24,17 @@
   </div>
 
   {{/if}}
-
   </div>
+
   <div class="schedule">
-    <h1>Schedule</h1>
-    <!-- This is where we'll add Schedule list item logic -->
-    <ul>
-      <li>No Tasks</li>
-    </ul>
+      <h1 class="scheduleTitle">Schedule</h1>
+      <!-- This is where we'll add Schedule list item logic -->
+      {{#if userPlants.length}}
+      {{> list-items userPlants}}
+      {{else}}
+      <ul>
+        <li>No Tasks</li>
+      </ul>
+      {{/if}}
   </div>
 </main>

@@ -17,6 +17,7 @@
     position: relative;
     overflow: hidden;
     border-style: none;
+    animation: fadeIn 2s;
 }
 
 .plant-card img {
