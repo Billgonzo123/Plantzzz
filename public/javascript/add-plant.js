@@ -6,7 +6,7 @@ async function cancelFormHandler(event) {
 async function addPlantFormHandler(event) {
   event.preventDefault();
 
-  const userSelectPlant = document.querySelector("#select-plants").value.trim();
+  const userSelectPlant = document.querySelector("#select-plant").value.trim();
   const userSelectNickname = document
     .querySelector("#plant-nickname")
     .value.trim();
@@ -42,17 +42,6 @@ async function addPlantFormHandler(event) {
     }
   }
 }
-
-// This will add the image related to what is selected in the form
-var selectPlant = document.querySelector("#select-plant");
-
-selectPlant.addEventListener("change", function () {
-  let plantName = selectPlant.options[selectPlant.selectedIndex].text;
-
-  plantName = plantName.replace(/ /g, "_").toLowerCase();
-
-  document.querySelector("#plant-image").src = `/assets/img/${plantName}.jpg`;
-});
 
 document.querySelector(".cancel").addEventListener("click", cancelFormHandler);
 
