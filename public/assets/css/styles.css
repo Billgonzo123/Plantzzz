@@ -70,6 +70,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: fadeIn 3.5s;
 }
 
 .menu {

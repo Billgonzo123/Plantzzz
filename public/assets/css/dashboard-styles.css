@@ -34,6 +34,7 @@ main {
     border-style: dotted;
     border-color: black;
     background: #F1F0F0;
+    animation: fadeIn 1.5s;
 }
 
 .add-plant {
@@ -57,6 +58,7 @@ main {
     position: sticky;
     align-self: flex-start;
     top: 0;
+    animation: flyLeft 1s;
 }
 
 
@@ -90,4 +92,26 @@ main {
         grid-template-columns: auto;
     }
     
+}
+
+/* Animations */
+@keyframes flyLeft {
+    from {
+        opacity: 0;
+        transform: translateX(600px);
+    }
+}
+
+
+@keyframes flyUp {
+    from {
+        opacity: 0;
+        transform: translateY(600px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
 }
