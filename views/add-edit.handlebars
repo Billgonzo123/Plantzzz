@@ -23,9 +23,10 @@
             <form id="edit-form">
                 <div class="form-field">
                     <label for="select-plant">Select Plant</label>
+                    <input id="hidden-plant" type="hidden" value="{{userPlant.plant.common_name}}">
                     <select name="select-plants" id="select-plant">
                         {{#each plants}}
-                            <option id="selected-plant" value="{{id}}">{{common_name}}</option>
+                            <option class="default-plant" value="{{id}}">{{common_name}}</option>
                         {{/each}}
                     </select>
                 </div>
@@ -97,6 +98,11 @@
             </form>
         </div>
     </div>
-<script src="/javascript/add-plant.js"></script>
+{{#if userPlant}}
 <script src="/javascript/edit-plant.js"></script>
-<script src="/javascript/plant-image.js"></script>
+<script src="/javascript/plant-img.js"></script>
+<script src="/javascript/delete-plant.js"></script>
+{{else}}
+<script src="/javascript/add-plant.js"></script>
+<script src="/javascript/plant-img.js"></script>
+{{/if}}
