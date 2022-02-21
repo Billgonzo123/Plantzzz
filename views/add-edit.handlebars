@@ -1,0 +1,77 @@
+
+<div class="add-edit">
+    <div class="container-left">
+            <div class="heading">
+        <h1>Add / Edit Plant</h1>
+    </div>
+    <div class="container">
+        <div class="card edit-card">
+            <img id="plant-image" src="/assets/img/african_violet.jpg" alt="">
+        </div>
+    </div>
+    </div>
+    <div class="container-right">
+        <div class="login-form">
+            <form id="edit-form">
+                <div class="form-field">
+                    <label for="select-plant">Select Plant</label>
+                    <select name="select-plants" id="select-plant">
+                        {{#each plants}}
+                            <option id="selected-plant" value="{{id}}">{{common_name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="plant-nickname">Plant Nickname</label>
+                    <input id="plant-nickname" type="text" class="form-input" placeholder="James the Giant Jade"
+                        required>
+                </div>
+                <div class="form-field">
+                    <label for="last-watered">Date Plant Last Watered</label>
+                    <input id="last-watered" type="date" class="form-input" required>
+                </div>
+                <label for="watering-frequency">Watering Frequency</label>
+                <div class="frequency">
+                    <div class="form-field">
+                        <label for="wf-value">Days</label>
+                        <select name="frequency-number" class="multiplier" id="wfVal" required>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="frequency-multiplier">Weeks</label>
+                        <select name="frequency-multiplier" class="multiplier" id="wfMult">
+                            <option value="0">None</option>
+                            <option value="7">One</option>
+                            <option value="14">Two</option>
+                            <option value="21">Three</option>
+                            <option value="28">Four</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="edit-buttons">
+                    {{#if userPlant}}
+                    <div class="form-field delete">
+                        <input type="submit" value="Delete" formnovalidate>
+                    </div>
+                    {{/if}}
+                    <div class="form-field cancel">
+                        <a href="/">
+                            <input type="button" value="Cancel" formnovalidate>
+                        </a>
+                    </div>
+                    <div class="form-field submit">
+                        <input type="submit" value="Save">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="/javascript/add-plant.js"></script>

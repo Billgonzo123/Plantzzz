@@ -12,7 +12,6 @@ html {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    align-items: center;
     min-height: 100%;
 }
 
@@ -42,7 +41,7 @@ form {
     flex-direction: column;
 }
 
-input {
+input, select, textarea {
     border: 0;
     border-radius: 5px;
     font-family: var(--main-font);
@@ -61,19 +60,6 @@ label {
     padding: 10px 0px 10px 0px;
     margin-top: 2rem;
 }
-
-.login-submit input {
-    background-color: #67B46E;
-    color: #fff;
-}
-
-.login-submit input:hover {
-    background-color: #b5e4b9;
-    color: #fff;
-}
-
-
-  
 
 .signup-success {
     font-family: var(--main-font);
