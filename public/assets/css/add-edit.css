@@ -4,7 +4,11 @@
     align-items: center;
     justify-content: center;
     gap: 5%;
-    min-height: 100%;
+    min-height: 80%;
+}
+.add-edit-title{
+    margin: auto;
+    margin-bottom:-30px;
 }
 
 .container-left {
