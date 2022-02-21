@@ -12,9 +12,11 @@ module.exports = {
         .toLowerCase();
       },
 
-    // getCurrentPlant: () => {
-    //   const plant = document.getElementById('select-plants').textContent;
+    waterFreq: (interval, dayFlag) => {
+      const day = Math.round(interval % 7);
+      const week = Math.round(interval / 7);
 
-    //   return plant;
-    // }
+      return (dayFlag)? day : week;
+    }
+
 }

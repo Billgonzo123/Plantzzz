@@ -2,11 +2,19 @@
 <div class="add-edit">
     <div class="container-left">
             <div class="heading">
-        <h1>Add / Edit Plant</h1>
+        {{#if userPlant}}
+            <h1>Edit Plant</h1>
+        {{else}}
+            <h1>Add Plant</h1>
+        {{/if}}
     </div>
     <div class="container">
         <div class="card edit-card">
-            <img id="plant-image" src="/assets/img/african_violet.jpg" alt="">
+            {{#if userPlant.plant_id}}
+                <img id="plant-image" src="/assets/img/{{imageFile userPlant.plant.common_name}}.jpg" alt="">
+            {{else}}
+                <img id="plant-image" src="/assets/img/african_violet.jpg" alt="">
+            {{/if}}
         </div>
     </div>
     </div>
@@ -23,18 +31,30 @@
                 </div>
                 <div class="form-field">
                     <label for="plant-nickname">Plant Nickname</label>
-                    <input id="plant-nickname" type="text" class="form-input" placeholder="James the Giant Jade"
-                        required>
+                    <input id="plant-nickname" type="text" class="form-input"  
+                    {{#if userPlant.plant_id}}
+                    value="{{userPlant.nickname}}"
+                    {{else}}
+                    placeholder="James the Giant Jade"
+                    {{/if}}
+                    required>
                 </div>
                 <div class="form-field">
                     <label for="last-watered">Date Plant Last Watered</label>
-                    <input id="last-watered" type="date" class="form-input" required>
+                    <input id="last-watered" type="date" class="form-input" 
+                    {{#if userPlant}}
+                    value={{userPlant.initial_water_date}}
+                    {{/if}}
+                    required>
                 </div>
                 <label for="watering-frequency">Watering Frequency</label>
                 <div class="frequency">
                     <div class="form-field">
                         <label for="wf-value">Days</label>
                         <select name="frequency-number" class="multiplier" id="wfVal" required>
+                            {{#if userPlant}}
+                            <option value="">{{waterFreq userPlant.watering_interval true}}</option>
+                            {{/if}}
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -47,11 +67,14 @@
                     <div class="form-field">
                         <label for="frequency-multiplier">Weeks</label>
                         <select name="frequency-multiplier" class="multiplier" id="wfMult">
-                            <option value="0">None</option>
-                            <option value="7">One</option>
-                            <option value="14">Two</option>
-                            <option value="21">Three</option>
-                            <option value="28">Four</option>
+                            {{#if userPlant}}
+                            <option value"">{{waterFreq userPlant.watering_interval false}}</option>
+                            {{/if}}
+                            <option value="0">0</option>
+                            <option value="7">1</option>
+                            <option value="14">2</option>
+                            <option value="21">3</option>
+                            <option value="28">4</option>
                         </select>
                     </div>
                 </div>
@@ -75,3 +98,5 @@
         </div>
     </div>
 <script src="/javascript/add-plant.js"></script>
+<script src="/javascript/edit-plant.js"></script>
+<script src="/javascript/plant-image.js"></script>
