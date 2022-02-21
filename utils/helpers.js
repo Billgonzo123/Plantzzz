@@ -3,8 +3,8 @@
 module.exports = {
   imageFile: commonName => {
     return commonName
-      .replace(' ', '_')
-      .toLowerCase();
+    .replace(/ /g,'_')
+    .toLowerCase();
   },
 
   waterFreq: (interval, dayFlag) => {
