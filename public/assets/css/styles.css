@@ -56,11 +56,13 @@ a:hover {
 
 .form-field.submit {
     text-align: center;
+    flex: 0;
 }
+
 .submit input {
     background-color: #67B46E;
     color: #fff;
-    width: 30%;
+    width: 100;
 }
 
 .cancel input {
