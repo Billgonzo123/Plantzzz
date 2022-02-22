@@ -1,6 +1,5 @@
-const plantBtn = document.querySelector('#plants-btn');
-const scheduleBtn = document.querySelector('#schedule-btn');
-
+const plantBtn = document.querySelector("#plants-btn");
+const scheduleBtn = document.querySelector("#schedule-btn");
 
 const hideSchedule = function (hide, show) {
   var myClasses = document.querySelectorAll(".schedule"),
@@ -24,23 +23,58 @@ const hideSchedule = function (hide, show) {
 };
 
 const hidePlants = function () {
-    var myClasses = document.querySelectorAll(".plant-grid"),
+  var myClasses = document.querySelectorAll(".plant-grid"),
+    i = 0,
+    l = myClasses.length;
+
+  for (i; i < l; i++) {
+    myClasses[i].style.display = "none";
+  }
+
+  var myClasses = document.querySelectorAll(".schedule"),
+    i = 0,
+    l = myClasses.length;
+
+  for (i; i < l; i++) {
+    myClasses[i].style.display = "flex";
+  }
+
+  scheduleBtn.style.backgroundColor = "#227A9F";
+  plantBtn.style.backgroundColor = "#70B2CE";
+};
+
+var observer = new IntersectionObserver(
+  function (entries) {
+    if (entries[0]["intersectionRatio"] == 1) {
+      // element is hidden
+      var myClasses = document.querySelectorAll(".plant-grid"),
+        i = 0,
+        l = myClasses.length;
+
+      for (i; i < l; i++) {
+        myClasses[i].style.display = "grid";
+      }
+
+      var myClasses = document.querySelectorAll(".schedule"),
+        i = 0,
+        l = myClasses.length;
+
+      for (i; i < l; i++) {
+        myClasses[i].style.display = "flex";
+      }
+    } else {
+      // element is visible
+      // entries[0]['intersectionRatio'] can be used to check whether element is visible fully or partially
+      var myClasses = document.querySelectorAll(".schedule"),
       i = 0,
       l = myClasses.length;
-  
-    for (i; i < l; i++) {
-      myClasses[i].style.display = "none";
-    }
-  
-    var myClasses = document.querySelectorAll(".schedule"),
-      i = 0,
-      l = myClasses.length;
-  
+
     for (i; i < l; i++) {
       myClasses[i].style.display = "flex";
     }
+    }
+  },
+  { root: document.documentElement });
 
-    scheduleBtn.style.backgroundColor = "#227A9F";
-    plantBtn.style.backgroundColor = "#70B2CE";
-  };
-
+// element to observe
+observer.observe(document.querySelector(".mobile-nav"));
