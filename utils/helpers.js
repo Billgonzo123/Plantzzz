@@ -6,7 +6,7 @@ module.exports = {
     .replace(/ /g,'_')
     .toLowerCase();
   },
-
+  //Transforms common_name so it can be useable in URL link
   plantURL: commonName => {
     return commonName
     .replace(/ /g,'-')

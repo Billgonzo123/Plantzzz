@@ -29,7 +29,9 @@
         <h3><b>Non-toxic</b></h3>
       {{else}}
         <h3><b>This plant is not safe for pets!</b></h3>
+        {{!-- The below links to the ASPCA website for plant toxicity info --}}
+        <h3><a href="https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/{{plantURL userPlant.plant.common_name}}">Resource for plant toxicity information</a>
       {{/if}}
-      <h3><a href="https://www.guide-to-houseplants.com/{{plantURL userPlant.plant.common_name}}.html">Click here for more info!</a>
+      <h3><a href="https://www.guide-to-houseplants.com/{{plantURL userPlant.plant.common_name}}.html">Click here for more info on how to care for your {{userPlant.plant.common_name}}!</a>
     </div>
 </div>
