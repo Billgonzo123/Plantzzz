@@ -1,5 +1,4 @@
 
-
 <div class="add-edit">
     <div class="container-left">
       <div class="heading add-edit-title">
@@ -7,8 +6,8 @@
     </div>
     <div class="container">
         <div class="card edit-card">
-            {{#if plant.plant_id}}
-                <img id="plant-image" src="/assets/img/{{imageFile plant.plant.common_name}}.jpg" alt="">
+            {{#if userPlant.plant_id}}
+                <img id="plant-image" src="/assets/img/{{imageFile plant.common_name}}.jpg" alt="">
             {{else}}
                 <img id="plant-image" src="/assets/img/african_violet.jpg" alt="">
             {{/if}}
@@ -16,44 +15,25 @@
     </div>
     </div>
     <div class="container-right">
-      <h2>Common Name</h2>
-      <p>{{plant.common_name}}</p>
-  
-  
-      <h2>Botanical Name</h2>
-      <p>{{plant.botanical_name}}</p>
-  
-  
-      <h2>Reccomended Watering Frequency</h2>
-      <p>{{plant.watering_interval}}</p>
+      <h3>Common Name: {{plant.common_name}}</h3>
 
-      <h2>Light</h2>
-      <p>{{plant.light}}</p>
-    
-    
-      <h2>Difficulty</h2>
-      <p>{{plant.difficulty}}</p>
-    
-    
-      <h2>Soil</h2>
-      <p>{{plant.soil}}</p>
-    
-    
-      <h2>Temperature</h2>
-      <p>{{plant.temp}}</p>
-    
-    
-      <h2>Soil</h2>
-      <p>{{plant.soil}}</p>
+      <h3>Botanical Name: {{plant.botanical_name}}</h3>
+
+      <h3>Reccomended Watering Frequency: Every {{plant.watering_interval}} days</h3>
+
+      <h3>Light: {{plant.light}}</h3>
+
+      <h3>Difficulty: {{plant.difficulty}}</h3>
+  
+      <h3>Soil: {{plant.soil}}</h3>
+
+      <h3>Temperature: {{plant.temp}}</h3>
     
       {{#if plant.pet_safe}}
-      
-        <h2>Non-toxic</h2>
-    
+        <h3>Non-toxic</h3>
       {{else}}
       
-        <h2>This plant is not safe for pets!</h2>
-      
+        <h3>This plant is not safe for pets!</h3>
       {{/if}}
 
     </div>
