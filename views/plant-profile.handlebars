@@ -2,34 +2,34 @@
 <div class="add-edit">
     <div class="container-left">
       <div class="heading add-edit-title">
-        <h2>{{userPlant.nickname}}</h2>
-    </div>
-    <div class="container">
+        <h2><b>{{userPlant.nickname}}</b></h2>
+      </div>
+      <div class="container">
         <div class="card edit-card">
           <img id="plant-image" src="/assets/img/{{imageFile userPlant.plant.common_name}}.jpg" alt="">
         </div>
-    </div>
+      </div>
     </div>
     <div class="container-right">
-      <h3>Common Name: {{userPlant.plant.common_name}}</h3>
+      <h3><b> Name: </b>{{userPlant.plant.common_name}}</h3>
 
-      <h3>Botanical Name: {{userPlant.plant.botanical_name}}</h3>
+      <h3><b>Botanical Name: </b>{{userPlant.plant.botanical_name}}</h3>
 
-      <h3>Reccomended Watering Frequency: Every {{userPlant.plant.watering_interval}} days</h3>
+      <h3><b>Reccomended Watering Frequency: </b>Every {{userPlant.plant.watering_interval}} days</h3>
 
-      <h3>Light: {{userPlant.plant.light}}</h3>
+      <h3><b>Light: </b>{{userPlant.plant.light}}</h3>
 
-      <h3>Difficulty: {{userPlant.plant.difficulty}}</h3>
+      <h3><b>Difficulty: </b>{{userPlant.plant.difficulty}}</h3>
   
-      <h3>Soil: {{userPlant.plant.soil}}</h3>
+      <h3><b>Soil: </b>{{userPlant.plant.soil}}</h3>
 
-      <h3>Temperature: {{userPlant.plant.temp}}</h3>
+      <h3><b>Temperature: </b>{{userPlant.plant.temp}}</h3>
     
       {{#if userPlant.plant.pet_safe}}
-        <h3>Non-toxic</h3>
+        <h3><b>Non-toxic</b></h3>
       {{else}}
-        <h3>This plant is not safe for pets!</h3>
+        <h3><b>This plant is not safe for pets!</b></h3>
       {{/if}}
+      <h3><a href="https://www.guide-to-houseplants.com/{{plantURL userPlant.plant.common_name}}.html">Click here for more info!</a>
     </div>
-  </div>
-
+</div>

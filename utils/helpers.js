@@ -7,6 +7,12 @@ module.exports = {
     .toLowerCase();
   },
 
+  plantURL: commonName => {
+    return commonName
+    .replace(/ /g,'-')
+    .toLowerCase();
+  },
+
   waterFreq: (interval, dayFlag) => {
     const day = Math.round(interval % 7);
     const week = Math.round(interval / 7);
