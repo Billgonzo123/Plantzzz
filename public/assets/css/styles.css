@@ -34,7 +34,7 @@ nav{
     text-align: center;
 }
 #title-header{
-   
+    font-size: 70px;
     color: black;
     font-family: var(--title-font);
     position: fixed;

@@ -6,6 +6,7 @@
 }
 .scheduleTitle
 {
+    font-size: 50px;
     margin-top: 0px;
     border-bottom: 4px dotted  #565656; ; 
     width: 100%;
@@ -16,7 +17,7 @@
     margin: -20px 1px 10px 1px;
     border-bottom: 4px dotted ;
     font-weight: bold;
-    font-size: 38px;
+    font-size: 30px;
    
 }
 
