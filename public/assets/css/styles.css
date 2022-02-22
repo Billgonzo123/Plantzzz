@@ -38,6 +38,14 @@ h1 {
     font-weight: 100;
 }
 
+/* Used in plant profile */
+h3 {
+    font-family: var(--main-font);
+    font-size: 18px;
+    font-weight: 100;
+    margin: 10px auto;
+}
+
 h2, h4 {
     font-family: var(--main-font);
     font-size: 36px;
