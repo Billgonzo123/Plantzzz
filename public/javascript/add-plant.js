@@ -23,13 +23,14 @@ async function addPlantFormHandler(event) {
     userSelectWfVal &&
     userSelectWfMult
   ) {
+    const water_int = parseInt(userSelectWfVal) + parseInt(userSelectWfMult);
     const response = await fetch("/api/userPlants", {
       method: "POST",
       body: JSON.stringify({
         nickname: userSelectNickname,
         plant_id: userSelectPlant,
         initial_water_date: userSelectDPLW,
-        watering_interval: userSelectWfVal + userSelectWfMult,
+        watering_interval: water_int,
       }),
       headers: { "Content-Type": "application/json" },
     });

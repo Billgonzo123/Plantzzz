@@ -54,7 +54,8 @@
                         <label for="wf-value">Days</label>
                         <select name="frequency-number" class="multiplier" id="wfVal" required>
                             {{#if userPlant}}
-                            <option value="">{{waterFreq userPlant.watering_interval true}}</option>
+                            <option value="{{waterFreq userPlant.watering_interval true}}">{{waterFreq userPlant.watering_interval true}}</option>
+                         
                             {{/if}}
                             <option value="0">0</option>
                             <option value="1">1</option>
@@ -69,7 +70,7 @@
                         <label for="frequency-multiplier">Weeks</label>
                         <select name="frequency-multiplier" class="multiplier" id="wfMult">
                             {{#if userPlant}}
-                            <option value"">{{waterFreq userPlant.watering_interval false}}</option>
+                            <option value"{{waterFreq userPlant.watering_interval false}}">{{waterFreq userPlant.watering_interval false}}</option>
                             {{/if}}
                             <option value="0">0</option>
                             <option value="7">1</option>
