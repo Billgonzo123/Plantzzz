@@ -2,13 +2,13 @@
 
 <div class="add-edit">
     <div class="container-left">
-            <div class="heading add-edit-title">
-        <hi>{{userPlant.plant-nickname}}</hi>
+      <div class="heading add-edit-title">
+        <h1>{{plant.nickname}}</h1>
     </div>
     <div class="container">
         <div class="card edit-card">
-            {{#if userPlant.plant_id}}
-                <img id="plant-image" src="/assets/img/{{imageFile userPlant.plant.common_name}}.jpg" alt="">
+            {{#if plant.plant_id}}
+                <img id="plant-image" src="/assets/img/{{imageFile plant.plant.common_name}}.jpg" alt="">
             {{else}}
                 <img id="plant-image" src="/assets/img/african_violet.jpg" alt="">
             {{/if}}
@@ -16,50 +16,46 @@
     </div>
     </div>
     <div class="container-right">
-        <div class="login-form">
-                <div class="form-field">
-                    <h2>Common Name</h2>
-                    <p>{{userPlant.plant.common_name}}</p>
-                </div>
-                <div class="form-field">
-                    <h2>Botanical Name</h2>
-                    <h4>Monstera</h4>
-                    <p>{{userPlant.plant.botanical_name}}</p>
-                </div>
-                <div class="form-field">
-                    <h2>Reccomended Watering Frequency</h2>
-                    <p>{{userPlant.watering_interval}}</p>
-                </div>
-                <div class="form-field">
-                  <h2>light</h2>
-                  <p>{{userPlant.light}}</p>
-                </div>
-                <div class="form-field">
-                  <h2>Difficulty</h2>
-                  <p>{{userPlant.difficulty}}</p>
-                </div>
-                <div class="form-field">
-                  <h2>Soil</h2>
-                  <p>{{userPlant.soil}}</p>
-                </div>
-                <div class="form-field">
-                  <h2>Temperature</h2>
-                  <p>{{userPlant.temp}}</p>
-                </div>
-                <div class="form-field">
-                  <h2>Soil</h2>
-                  <p>{{userPlant.soil}}</p>
-                </div>
-                {{#if userPlant.pet_safe}}
-                  <div class="form-field">
-                      <h2>Non-toxic</h2>
-                  </div>
-                  {{else}}
-                  <div class="form-field">
-                      <h2>This plant is not safe for pets!</h2>
-                  </div>
-                  {{/if}}
-              </div>
-        </div>
+      <h2>Common Name</h2>
+      <p>{{plant.common_name}}</p>
+  
+  
+      <h2>Botanical Name</h2>
+      <p>{{plant.botanical_name}}</p>
+  
+  
+      <h2>Reccomended Watering Frequency</h2>
+      <p>{{plant.watering_interval}}</p>
+
+      <h2>Light</h2>
+      <p>{{plant.light}}</p>
+    
+    
+      <h2>Difficulty</h2>
+      <p>{{plant.difficulty}}</p>
+    
+    
+      <h2>Soil</h2>
+      <p>{{plant.soil}}</p>
+    
+    
+      <h2>Temperature</h2>
+      <p>{{plant.temp}}</p>
+    
+    
+      <h2>Soil</h2>
+      <p>{{plant.soil}}</p>
+    
+      {{#if plant.pet_safe}}
+      
+        <h2>Non-toxic</h2>
+    
+      {{else}}
+      
+        <h2>This plant is not safe for pets!</h2>
+      
+      {{/if}}
+
     </div>
+  </div>
 
