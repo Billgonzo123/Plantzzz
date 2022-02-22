@@ -46,6 +46,4 @@ async function addPlantFormHandler(event) {
 
 document.querySelector(".cancel").addEventListener("click", cancelFormHandler);
 
-document
-  .querySelector(".submit")
-  .addEventListener("click", addPlantFormHandler);
+document.querySelector(".submit").addEventListener("click", addPlantFormHandler);

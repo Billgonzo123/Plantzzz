@@ -1,0 +1,58 @@
+:root {
+  --title-font: "Alata", sans-serif;
+  --main-font: "Biryani", sans-serif;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 850px) {
+  /*Small smartphones [325px -> 425px]*/
+
+  .mobile-nav {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    margin-top: 90px;
+    width: 100%;
+    align-items: flex-end;
+  }
+
+  .mobile-btn {
+    font-family: var(--main-font);
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px;
+    padding: 5px 0px 5px 0px;
+    width: 100%;
+    background-color: #70b2ce;
+  }
+  .mobile-btn:hover {
+      opacity: 60%;
+  }
+
+  .mobile-btn:active {
+    opacity: #227A9F;
+}
+
+  .plant-grid {
+    display: none;
+  }
+  .schedule {
+      padding-top: 200px;
+  }
+  .schedule-title {
+    display: none;
+  }
+
+  @keyframes flyLeft {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+  }
+}
