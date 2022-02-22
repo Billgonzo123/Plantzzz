@@ -120,7 +120,7 @@ router.post('/login', (req, res) => {
         }
         
         req.session.save(() => {
-            if (req.body.email !== 'admin@adminemail.com') req.session.admin = true;
+            if (req.body.email === 'admin@adminemail.com') req.session.admin = true;
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
             req.session.loggedIn = true;
