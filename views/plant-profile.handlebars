@@ -1,0 +1,61 @@
+
+
+<div class="add-edit">
+    <div class="container-left">
+            <div class="heading add-edit-title">
+        <hi>{{userPlant.plant-nickname}}</hi>
+    </div>
+    <div class="container">
+        <div class="card edit-card">
+                <img id="plant-image" src="/assets/img/{{imageFile userPlant.plant.common_name}}.jpg" alt="">
+        </div>
+    </div>
+    </div>
+    <div class="container-right">
+        <div class="login-form">
+            <form id="edit-form">
+                <div class="form-field">
+                    <h2>Common Name</h2>
+                    <p>{{userPlant.plant.common_name}}</p>
+                </div>
+                <div class="form-field">
+                    <h2>Botanical Name</h2>
+                    <p>{{userPlant.plant.botanical_name}}</p>
+                </div>
+                <div class="form-field">
+                    <h2>Reccomended Watering Frequency</h2>
+                    <p>{{userPlant.watering_interval}}</p>
+                </div>
+                <div class="form-field">
+                  <h2>light</h2>
+                  <p>{{userPlant.light}}</p>
+                </div>
+                <div class="form-field">
+                  <h2>Difficulty</h2>
+                  <p>{{userPlant.difficulty}}</p>
+                </div>
+                <div class="form-field">
+                  <h2>Soil</h2>
+                  <p>{{userPlant.soil}}</p>
+                </div>
+                <div class="form-field">
+                  <h2>Temperature</h2>
+                  <p>{{userPlant.temp}}</p>
+                </div>
+                <div class="form-field">
+                  <h2>Soil</h2>
+                  <p>{{userPlant.soil}}</p>
+                </div>
+                {{#if userPlant.pet_safe}}
+                  <div class="form-field">
+                      <h2>Non-toxic</h2>
+                  </div>
+                  {{else}}
+                  <div class="form-field">
+                      <h2>This plant is not safe for pets!</h2>
+                  </div>
+                  {{/if}}
+              </div>
+        </div>
+    </div>
+
