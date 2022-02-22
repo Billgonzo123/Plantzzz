@@ -7,11 +7,15 @@ module.exports = {
     .toLowerCase();
   },
 
-  waterFreq: (interval, dayFlag) => {
-    const day = Math.round(interval % 7);
-    const week = Math.round(interval / 7);
+  waterFreq: (interval, dayFlag, weeksAsDays) => {
+    const day = Math.floor(interval % 7) ;
+    let week = Math.floor(interval/7);
+    console.log('Day: ',day,"Weeks: ", week)
 
-    return (dayFlag)? day : week;
+    if (weeksAsDays) week = week*7;   
+    
+    return (dayFlag) ? day : week;
+    
   },
   
   //check userPlant for watering days
