@@ -21,7 +21,6 @@ const { Plants, Users, UserPlants } = require('../models');
            include: [
               {
                  model: Plants,
-                 attributes: ['common_name']
               },
               {
                   model: Users,
