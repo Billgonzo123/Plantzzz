@@ -20,6 +20,9 @@
     right: 0;
     top: 15px;
   }
+  .schedule{
+    z-index: 0;
+  }
 
   .mobile-nav {
     display: flex;
@@ -28,6 +31,7 @@
     margin-top: 90px;
     width: 100%;
     align-items: flex-end;
+    background-color: white;
   }
 
   .mobile-btn {
@@ -68,7 +72,7 @@
   @keyframes flyLeft {
     from {
       opacity: 0;
-      transform: translateX(100%);
+     
     }
   }
 }

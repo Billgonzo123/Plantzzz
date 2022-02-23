@@ -41,7 +41,6 @@ main {
 }
 
 .schedule {
-  padding-top: 100px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -53,6 +52,7 @@ main {
   align-self: flex-start;
   top: 0;
   animation: flyLeft 1s;
+  z-index: 100;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -77,8 +77,8 @@ main {
   }
 
   #title-header {
-    right: 28%;
-    top: 15px;
+    right: 23%;
+    
   }
 
   .add-plant {
@@ -122,7 +122,6 @@ main {
 
 /* Animations */
 @keyframes flyLeft {
-
     from {
         opacity: 0;
         transform: scalex(0);
