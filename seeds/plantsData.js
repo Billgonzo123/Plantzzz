@@ -355,7 +355,7 @@ const plantsdata = [
     }
     ,
     {
-        common_name: 'String of Pearls',
+        common_name: 'String of Pearls Plant',
         botanical_name: 'Senecio rowleyanus',
         light: 'Bright/Indirect',
         watering_interval: 14,

@@ -35,7 +35,8 @@ const userSelectWfMult = document.querySelector("#wfMult").value.trim();
       console.log("plant updated");
       document.location.replace("/");
     } else {
-      alert("Plant already exists in account!");
+      //if no change, go to dashboard
+      document.location.replace("/");
     }
   }
 }
