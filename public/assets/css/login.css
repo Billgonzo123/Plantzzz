@@ -23,6 +23,7 @@ html {
 
 .logo { 
     text-align: center;
+    z-index: 100;
 }
 
 .logo h1 {

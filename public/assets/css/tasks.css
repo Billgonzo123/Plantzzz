@@ -3,61 +3,82 @@
     color: #565656;
     width: 70%;
     animation: flyLeft 1.5s;
+  /* Hide scrollbar for IE, Edge and Firefox */
+   -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
-.scheduleTitle
+
+.schedule-title
 {
+    font-size: 50px;
     margin-top: 0px;
-    border-bottom: 4px dotted  #565656; ; 
     width: 100%;
     text-align: center;
+  
+
 }
 
 .todayDate {
     margin: -20px 1px 10px 1px;
     border-bottom: 4px dotted ;
-    font-weight: bold;
-    font-size: 38px;
+    font-size: 42px;
    
 }
 
 .taskDate {
     margin: 30px 1px 10px 1px;
     border-bottom: 4px dotted ;
- 
-    font-weight: bold;
-    font-size: 30px;
+    font-size: 42px;
 }
 
 #taskPlant {
     margin: 1px 1px 1px 50px;
     padding: 0px;
-    font-weight: 500;
-    font-size: 24px;
+    font-size: 30px;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 #taskDiv::-webkit-scrollbar {
     display: none;
   }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-  #taskDiv {
+    /* Hide scrollbar for IE, Edge and Firefox */
+ #taskDiv {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+}
+#taskDiv:hover::-webkit-scrollbar {
+    display: block;
+    background-color: rgb(202, 196, 182);
+    border-radius: 50px;
+    width: .5vw;
   }
-
+  #taskDiv:hover::-webkit-scrollbar-thumb {
+    display: block;
+    background-color: rgb(53, 51, 47);
+    border-radius: 50px;
+  }
+  #taskDiv:hover {
+    -ms-overflow-style: scrollbar;  /* IE and Edge */
+    scrollbar-width: auto;  /* Firefox */
+}
+  
 
   @media only screen and (max-width: 1800px){
    
     .scheduleTitle {
-        font-size: 28px;
+        font-size: 56px;
     }
     .taskDate, .todayDate {
-        font-size: 20px;
+        font-size: 32px;
     } 
     #taskPlant {
         margin: 1px 1px 1px 10px;
-        font-size: 18px;
+        font-size: 20px;
     }
-  
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
 }

@@ -6,6 +6,8 @@ module.exports = {
     .replace(/ /g,'_')
     .toLowerCase();
   },
+
+
   
   //Transforms common_name so it can be used in URL links
   plantURL: commonName => {
@@ -14,11 +16,12 @@ module.exports = {
     .toLowerCase();
   },
   
-  waterFreq: (interval, dayFlag) => {
-    const day = Math.round(interval % 7);
-    const week = Math.round(interval / 7);
-
-    return (dayFlag)? day : week;
+  waterFreq: (interval, dayFlag, weeksAsDays) => {
+    const day = Math.floor(interval % 7) ;
+    let week = Math.floor(interval/7);
+    if (weeksAsDays) week = week*7; 
+      
+    return dayFlag ? day : week;
   },
   
   //check userPlant for watering days
