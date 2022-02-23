@@ -27,26 +27,27 @@ module.exports = {
   //check userPlant for watering days
   renderUserPlants: (userPlants) => {
     let dates = [];
-
+    //populate dates array with date keys for 14days, each with an empty plants array and a noTask flag
     for (i = 0; i < 14; i++) {
       let newDate = new Date();
       newDate.setDate(newDate.getDate() + i);
       const options = { year: 'numeric', month: 'short', day: 'numeric' };
-      dates.push({ date: newDate.toLocaleDateString("en-US", options), plants: [] });
-
+      dates.push({ date: newDate.toLocaleDateString("en-US", options), plants: [], noTasks: false });
+      //populate dates[i].plants with the plants for each day
       userPlants.forEach(plant => {
         //get inital water date
         const firstWaterDate = new Date(plant.initial_water_date);
         //get how many days since inital water date
         const diff = getDifferenceInDays(newDate, firstWaterDate);
-        //if there is no remained, then current date is a day of watering
+        //if there is no remainder, then current date is a day of watering
         (diff % plant.watering_interval) ? false : dates[i].plants.push('Water ' + plant.nickname);
       })
-  
+      //if the the current date has no plants, set the noTask flag to true
+      //this tells handlebars to format the list item differently
+      if (!dates[dates.length - 1].plants[0]) dates[dates.length - 1].noTasks = true;
     }
     return dates;
   }
-
 };
 
 //get diff in days from inital water date
