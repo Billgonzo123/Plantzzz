@@ -117,7 +117,7 @@ a:hover {
 .delete input {
   background-color: #d3705b;
   color: #fff;
-  width: 100;
+  width: 100px;
 }
 
 .submit:hover,
