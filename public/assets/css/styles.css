@@ -99,18 +99,19 @@ a:hover {
 .form-field.submit {
   text-align: center;
   flex: 0;
+  width: 100px;
 }
 
 .submit input {
   background-color: #67b46e;
   color: #fff;
-  width: 100;
+  width: 100px;
 }
 
 .cancel input {
   background-color: #227a9f;
   color: #fff;
-  width: 100;
+  width: 100px;
 }
 
 .delete input {
