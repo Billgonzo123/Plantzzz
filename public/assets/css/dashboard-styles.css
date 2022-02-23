@@ -49,7 +49,6 @@ main {
   flex-basis: auto;
   align-items: center;
   background: #f6eee1;
-
   position: sticky;
   align-self: flex-start;
   top: 0;
@@ -123,10 +122,11 @@ main {
 
 /* Animations */
 @keyframes flyLeft {
-  from {
-    opacity: 0;
-    transform: translateX(600px);
-  }
+
+    from {
+        opacity: 0;
+        transform: scalex(0);
+    }
 }
 
 @keyframes flyUp {

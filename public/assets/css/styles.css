@@ -5,6 +5,38 @@
 
 body {
   margin: 0;
+  -ms-overflow-style: none;  /* IE and Edge */
+   scrollbar-width: none;  /* Firefox */
+  }
+
+header {
+    margin-bottom: 40px;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 90px;
+    background-color: white;
+}
+
+nav {
+    height: auto;
+}
+
+#banner-link{
+    position: sticky;
+    top: 0;
+    text-align: center;
+}
+
+#title-header{
+    font-size: 70px;
+    color: black;
+    font-family: var(--title-font);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: auto;
+    animation: fadeIn 2s;
 }
 
 h1 {
@@ -69,15 +101,6 @@ header {
   position: sticky;
   top: 0;
   text-align: center;
-}
-#title-header {
-  color: black;
-  font-family: var(--title-font);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  margin: auto;
-  animation: fadeIn 2s;
 }
 
 .form-field.submit {

@@ -3,9 +3,14 @@
     color: #565656;
     width: 70%;
     animation: flyLeft 1.5s;
+  /* Hide scrollbar for IE, Edge and Firefox */
+   -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
+
 .schedule-title
 {
+    font-size: 50px;
     margin-top: 0px;
     width: 100%;
     text-align: center;
@@ -34,13 +39,27 @@
 #taskDiv::-webkit-scrollbar {
     display: none;
   }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-  #taskDiv {
+    /* Hide scrollbar for IE, Edge and Firefox */
+ #taskDiv {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+}
+#taskDiv:hover::-webkit-scrollbar {
+    display: block;
+    background-color: rgb(202, 196, 182);
+    border-radius: 50px;
+    width: .5vw;
   }
-
+  #taskDiv:hover::-webkit-scrollbar-thumb {
+    display: block;
+    background-color: rgb(53, 51, 47);
+    border-radius: 50px;
+  }
+  #taskDiv:hover {
+    -ms-overflow-style: scrollbar;  /* IE and Edge */
+    scrollbar-width: auto;  /* Firefox */
+}
+  
 
   @media only screen and (max-width: 1800px){
    
@@ -54,5 +73,10 @@
         margin: 1px 1px 1px 10px;
         font-size: 20px;
     }
-  
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
 }

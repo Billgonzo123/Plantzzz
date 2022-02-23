@@ -16,6 +16,11 @@ const isAdmin = (req, res, next) => {
     }
 };
 
+const userIdMatch = (req, res, next) => {
+  
+    (req.session.user_id == req.params.id) ? next() : res.json({message: 'You do not own this user id'});
+}
+
 
 const testSession =  (req, res, next) => { // <------This is a test session. delete this code and where they appear in the routes when login functionality is available
 
@@ -30,4 +35,4 @@ const testSession =  (req, res, next) => { // <------This is a test session. del
 }
  ////------end test session login-----//
 
-module.exports = {withAuth, isAdmin, testSession};
+module.exports = {withAuth, isAdmin, testSession, userIdMatch};

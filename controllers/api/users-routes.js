@@ -1,12 +1,12 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const {Users, UserPlants, Plants  } = require('../../models');
-const {withAuth} = require('../../utils/auth') //this is middleware to check if user is loggin
+const { Users, UserPlants, Plants } = require('../../models');
+const { withAuth, isAdmin, userIdMatch } = require('../../utils/auth') //this is middleware to check if user is loggin
 
 //-----api route /api/users-----//
 
 //GET all user info
-router.get('/', (req,res) => {
+router.get('/', (req, res) => {
     Users.findAll({})
         .then(dbUserData => res.json(dbUserData))
         .catch(err => {
@@ -22,15 +22,15 @@ router.get('/:id', (req, res) => {
             id: req.params.id
         }
     }).then(dbUserData => {
-    if (!dbUserData) {
-        res.status(404).json({ message: 'user not found under that id'});
-    }
+        if (!dbUserData) {
+            res.status(404).json({ message: 'user not found under that id' });
+        }
         res.json(dbUserData)
     })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json;
-    })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json;
+        })
 });
 
 //POST new user api/user
@@ -43,17 +43,17 @@ router.post('/', (req, res) => {
         email: req.body.email,
         password: req.body.password
     })
-    .then(dbUserData => {
-       res.json({message: 'Sign Up Successful'})
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json({message: "User already exists"});
-    });
+        .then(dbUserData => {
+            res.json({ message: 'Sign Up Successful' })
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({ message: "User already exists" });
+        });
 })
 
 // PUT /api/users/1
-router.put('/:id',withAuth, (req, res) => {
+router.put('/:id', withAuth, userIdMatch,  (req, res) => {
     // expects in the body any combonation of {username: 'newusername', email: 'new@gmail.com', password: 'newpassword1234'}
 
     // if req.body has exact key/value pairs to match the model, you can just use `req.body` instead
@@ -62,8 +62,6 @@ router.put('/:id',withAuth, (req, res) => {
         where: {
             id: req.params.id
         }
-        
-
     })
         .then(dbUserData => {
             if (!dbUserData[0]) {
@@ -74,28 +72,29 @@ router.put('/:id',withAuth, (req, res) => {
         })
         .catch(err => {
             console.log(err);
-            res.status(500).json(err);
+            res.status(500).json(err.errors[0].message);
         });
 });
 
 // DELETE /api/users/1
-router.delete('/:id', (req, res) => {
-    Users.destroy({
-        where: {
-            id: req.params.id
-        }
-    })
-        .then(dbUserData => {
-            if (!dbUserData) {
-                res.status(404).json({ message: 'No user found with this id' });
-                return;
+router.delete('/:id',isAdmin, (req, res) => {
+
+        Users.destroy({
+            where: {
+                id: req.params.id
             }
-            res.json(dbUserData);
         })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+            .then(dbUserData => {
+                if (!dbUserData) {
+                    res.status(404).json({ message: 'No user found with this id' });
+                    return;
+                }
+                res.json(dbUserData);
+            })
+            .catch(err => {
+                console.log(err);
+                res.status(500).json(err);
+            });
 });
 
 //login request /api/users
@@ -118,9 +117,9 @@ router.post('/login', (req, res) => {
             res.status(400).json({ message: 'Incorrect password!' });
             return;
         }
-        
+
         req.session.save(() => {
-            if (req.body.email !== 'admin@adminemail.com') req.session.admin = true;
+            if (req.body.email === 'admin@adminemail.com') req.session.admin = true;
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
             req.session.loggedIn = true;
@@ -137,12 +136,12 @@ router.post('/logout', withAuth, (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
             console.log('-----Logged out------');
-          res.status(204).end();
+            res.status(204).end();
         });
-      }
-      else {
+    }
+    else {
         res.status(404).end();
-      }
+    }
 })
 
 module.exports = router;
