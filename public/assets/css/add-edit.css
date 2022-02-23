@@ -1,4 +1,5 @@
 .add-edit {
+  padding-top: 130px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -70,6 +71,7 @@ select {
 
 @media only screen and (max-width: 850px) {
   .add-edit {
+    padding-top: 80px;
     justify-content: center;
     align-items: center;
     gap: 40px;

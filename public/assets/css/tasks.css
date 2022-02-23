@@ -27,7 +27,7 @@
   font-size: 42px;
 }
 
-#taskPlant {
+.taskPlant {
   margin: 1px 1px 1px 50px;
   padding: 0px;
   font-size: 30px;
@@ -57,18 +57,32 @@
   -ms-overflow-style: scrollbar; /* IE and Edge */
   scrollbar-width: auto; /* Firefox */
 }
+.noTask {
+  text-align: center;
+  margin: 1px 1px 1px 50px;
+  padding: 0px;
+  font-size: 30px;
+}
 
-@media only screen and (max-width: 1800px) {
-  .scheduleTitle {
-    font-size: 56px;
-  }
+.greyedOut {
+  opacity: 0.9;
+  color: rgb(180, 180, 180);
+}
+
+@media only screen and (max-width: 1900px) {
+
   .taskDate,
   .todayDate {
-    font-size: 32px;
+    font-size: 24px;
   }
-  #taskPlant {
+  .taskPlant {
     margin: 1px 1px 1px 10px;
-    font-size: 20px;
+    font-size: 18px;
+  }
+  .noTask {
+    text-align: center;
+    margin: 1px 1px 1px 10px;
+    font-size: 18px;
   }
 }
 
