@@ -52,4 +52,4 @@ function populate () {
 }
 populate();
 
-document.querySelector(".submit").addEventListener("click", editPlantFormHandler);
+document.querySelector('#edit-form').addEventListener("submit", editPlantFormHandler)
