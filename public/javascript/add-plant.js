@@ -44,6 +44,60 @@ async function addPlantFormHandler(event) {
   }
 }
 
+async function frequencyHandler() {
+  const dayEl = document.querySelector('#wfVal');
+  const weekEl = document.querySelector('#wfMult');
+  const selectedPlant = document.querySelector('#select-plant').value;
+
+  const response = await fetch(`/api/plants/${selectedPlant}`)
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    let day = dayFreq(data.watering_interval);
+    let week = weekFreq(data.watering_interval);
+
+    let dayOption = document.querySelectorAll('.day-freq');
+    // dayEl.selectedIndex = "-1";
+
+    for (let i = 0; i < dayOption.length; i++) {
+        if (day == dayOption[i].innerHTML) {
+          dayOption[i].setAttribute('selected', 'selected');
+        }
+    }
+
+    let wkOption = document.querySelectorAll('.week-freq');
+    // weekEl.selectedIndex = "-1";
+
+    for (let i = 0; i < wkOption.length; i++) {
+        if (week == wkOption[i].innerHTML) {
+          wkOption[i].setAttribute('selected', 'selected');
+        }
+    }
+
+  })
+}
+
+function dayFreq(int) {
+  let day = Math.floor(int % 7);
+  if (!day) {
+    day = 0;
+  }
+  return day;
+}
+
+function weekFreq(int) {
+  let week = Math.floor(int / 7);
+  if (!week) {
+    week = 0;
+  }
+  return week;
+}
+
+window.addEventListener('load', frequencyHandler);
+
+document.querySelector("#select-plant").addEventListener("change", frequencyHandler);
+
 document.querySelector(".cancel").addEventListener("click", cancelFormHandler);
 
 document.querySelector(".submit").addEventListener("click", addPlantFormHandler);
