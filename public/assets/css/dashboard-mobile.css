@@ -16,6 +16,10 @@
 }
 
 @media only screen and (max-width: 850px) {
+  #title-header {
+    right: 0;
+    top: 15px;
+  }
 
   .mobile-nav {
     display: flex;
