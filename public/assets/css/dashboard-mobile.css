@@ -7,8 +7,15 @@
   display: none;
 }
 
+.schedule.active {
+  display: flex;
+}
+
+.plant-grid.active {
+  display: grid;
+}
+
 @media only screen and (max-width: 850px) {
-  /*Small smartphones [325px -> 425px]*/
 
   .mobile-nav {
     display: flex;
@@ -42,6 +49,11 @@
   .plant-grid {
     display: none;
   }
+
+  .schedule {
+    display: none;
+  }
+  
   .schedule {
       padding-top: 200px;
   }
