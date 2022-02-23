@@ -1,3 +1,4 @@
+
 async function cancelFormHandler(event) {
   event.preventDefault();
   document.location.replace("/");
@@ -43,6 +44,7 @@ async function addPlantFormHandler(event) {
     }
   }
 }
+
 
 document.querySelector(".cancel").addEventListener("click", cancelFormHandler);
 

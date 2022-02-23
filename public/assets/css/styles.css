@@ -180,3 +180,16 @@ a:hover {
   display: block;
 }
 
+
+
+
+input.error, select.error {
+  border: 2px solid red;
+  color: red;
+}
+
+
+:required:valid {
+  border: none;
+  color: black;
+} 

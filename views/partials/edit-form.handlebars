@@ -28,15 +28,15 @@
                     {{/if}}
                     required>
                 </div>
-                <label for="watering-frequency">Watering Frequency</label>
+                <label for="watering-frequency">Watering frequency</label>
                 <div class="frequency">
                     <div class="form-field">
                         <label for="wf-value">Days</label>
                         <select name="frequency-number" class="multiplier" id="wfVal" required>
-                            <option value="">Select days</option>
                             {{#if userPlant}}
                             <option value="{{waterFreq userPlant.watering_interval true false}}">{{waterFreq userPlant.watering_interval true false}}</option>
-                         
+                            {{else}}
+                            <option value="">Select Interval</option>
                             {{/if}}
                             <option value="0">0</option>
                             <option value="1">1</option>
@@ -50,9 +50,10 @@
                     <div class="form-field">
                         <label for="frequency-multiplier">Weeks</label>
                         <select name="frequency-multiplier" class="multiplier" id="wfMult" required>
-                            <option value="">Select weeks</option>
                             {{#if userPlant}}
                             <option value={{waterFreq userPlant.watering_interval false true }}>{{waterFreq userPlant.watering_interval false false}}</option>
+                             {{else}}
+                            <option value="">Select Interval</option>
                             {{/if}}
                             <option value="0">0</option>
                             <option value="7">1</option>
