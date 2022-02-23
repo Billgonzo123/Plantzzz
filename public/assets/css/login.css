@@ -1,79 +1,87 @@
 :root {
-    --title-font: 'Alata', sans-serif;
-    --main-font: 'Biryani', sans-serif;
+  --title-font: "Alata", sans-serif;
+  --main-font: "Biryani", sans-serif;
 }
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 .login-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .container {
-    width: 450px;
-    display: flex;
-    flex-direction: column;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
 }
 
-.logo { 
-    text-align: center;
-    z-index: 100;
+.logo {
+  text-align: center;
+  z-index: 100;
 }
 
 .logo h1 {
-    font-size: 144px;
-    font-weight: 100;
-    margin: auto;
+  font-size: 144px;
+  font-weight: 100;
+  margin: auto;
 }
 
-.login-title, .login-link, .signup-success {
-    text-align: center;
-    margin: auto;
+.login-title,
+.login-link,
+.signup-success {
+  text-align: center;
+  margin: auto;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-input, select, textarea {
-    border: 0;
-    border-radius: 5px;
-    font-family: var(--main-font);
-    width: 100%;
-    margin: 10px 0px 10px 0px;
-    outline: 0;
-    padding: 10px;
-    background-color: #E9E8E8;
-  }
+input,
+select,
+textarea {
+  border: 0;
+  border-radius: 5px;
+  font-family: var(--main-font);
+  width: 100%;
+  margin: 10px 0px 10px 0px;
+  outline: 0;
+  padding: 10px;
+  background-color: #e9e8e8;
+}
 
 label {
-    font-family: var(--main-font);
+  font-family: var(--main-font);
 }
 
 .login-submit {
-    padding: 10px 0px 10px 0px;
-    margin-top: 2rem;
+  padding: 10px 0px 10px 0px;
+  margin-top: 2rem;
 }
 
 .signup-success {
-    font-family: var(--main-font);
-    font-size: 10;
-    animation: fadeIn 3s;
+  font-family: var(--main-font);
+  font-size: 10;
+  animation: fadeIn 3s;
 }
-
-
 
 /* animation keyframes */
 
 @keyframes fadeIn {
-    from { 
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 }
+
+@media only screen and (max-width: 650px) {
+    .logo h1 {
+        font-size: 100px;
+    }
+  }

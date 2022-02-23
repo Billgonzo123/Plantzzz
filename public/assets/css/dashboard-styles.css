@@ -76,11 +76,6 @@ main {
     font-size: 48px;
   }
 
-  #title-header {
-    right: 23%;
-    
-  }
-
   .add-plant {
     margin-top: 7px;
     font-size: 24px;
@@ -122,10 +117,10 @@ main {
 
 /* Animations */
 @keyframes flyLeft {
-    from {
-        opacity: 0;
-        transform: scalex(0);
-    }
+  from {
+    opacity: 0;
+    transform: scalex(0);
+  }
 }
 
 @keyframes flyUp {
