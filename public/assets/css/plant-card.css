@@ -1,45 +1,45 @@
 .card-container {
-    position: relative;
+  position: relative;
 }
 
 .edit-icon {
-    position: absolute;
-    top: 20;
-    right: 20;
-    color: #000
+  position: absolute;
+  top: 20;
+  right: 20;
+  color: #000;
 }
 
 .info-icon {
-    position: absolute;
-    top: 20;
-    left: 20;
-    color: #000
+  position: absolute;
+  top: 20;
+  left: 20;
+  color: #000;
 }
 
 .card-container i:hover {
-    opacity: 60%;
+  opacity: 60%;
 }
 
 .plant-card {
-    position: relative;
-    overflow: hidden;
-    border-style: none;
-    animation: fadeIn 2s;
+  position: relative;
+  overflow: hidden;
+  border-style: none;
+  animation: fadeIn 2s;
 }
 
 .plant-card img {
-    width: 100%;
-    height: -webkit-fill-available;
+  width: 100%;
+  height: -webkit-fill-available;
 }
 
 .good {
-    background-color: #83C195;
+  background-color: #83c195;
 }
 
 .fair {
-    background-color: #E8C751;
+  background-color: #e8c751;
 }
 
 .water {
-    background-color: #D3705B;
+  background-color: #d3705b;
 }
