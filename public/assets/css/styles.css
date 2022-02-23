@@ -103,19 +103,19 @@ a:hover {
 .submit input {
   background-color: #67b46e;
   color: #fff;
-  width: 100;
+  width: 100px;
 }
 
 .cancel input {
   background-color: #227a9f;
   color: #fff;
-  width: 100;
+  width: 100px;
 }
 
 .delete input {
   background-color: #d3705b;
   color: #fff;
-  width: 100;
+  width: 100px;
 }
 
 .submit:hover,
@@ -169,6 +169,8 @@ a:hover {
   display: block;
   text-align: center;
 }
+
+
 
 /* Change color of dropdown links on hover */
 .menu-content a:hover {
