@@ -1,0 +1,81 @@
+    <div class="container-right">
+        <div class="login-form">
+            <form id="edit-form">
+                <div class="form-field">
+                    <label for="select-plant">Select Plant</label>
+                    <input id="hidden-plant" type="hidden" value="{{userPlant.plant.common_name}}">
+                    <select name="select-plants" id="select-plant">
+                        {{#each plants}}
+                            <option class="default-plant" value="{{id}}">{{common_name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="plant-nickname">Plant Nickname</label>
+                    <input id="plant-nickname" type="text" class="form-input"  
+                    {{#if userPlant.plant_id}}
+                    value="{{userPlant.nickname}}"
+                    {{else}}
+                    placeholder="James the Giant Jade"
+                    {{/if}}
+                    required>
+                </div>
+                <div class="form-field">
+                    <label for="last-watered">Date Plant Last Watered</label>
+                    <input id="last-watered" type="date" class="form-input" 
+                    {{#if userPlant}}
+                    value={{userPlant.initial_water_date}}
+                    {{/if}}
+                    required>
+                </div>
+                <label for="watering-frequency">Watering Frequency</label>
+                <div class="frequency">
+                    <div class="form-field">
+                        <label for="wf-value">Days</label>
+                        <select name="frequency-number" class="multiplier" id="wfVal" required>
+                            {{#if userPlant}}
+                            <option value="{{waterFreq userPlant.watering_interval true false}}">{{waterFreq userPlant.watering_interval true false}}</option>
+                         
+                            {{/if}}
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="frequency-multiplier">Weeks</label>
+                        <select name="frequency-multiplier" class="multiplier" id="wfMult">
+                            {{#if userPlant}}
+                            <option value={{waterFreq userPlant.watering_interval false true }}>{{waterFreq userPlant.watering_interval false false}}</option>
+                            {{/if}}
+                            <option value="0">0</option>
+                            <option value="7">1</option>
+                            <option value="14">2</option>
+                            <option value="21">3</option>
+                            <option value="28">4</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="edit-buttons">
+                    {{#if userPlant}}
+                    <div class="form-field delete">
+                        <input type="submit" value="Delete" formnovalidate>
+                    </div>
+                    {{/if}}
+                    <div class="form-field cancel">
+                        <a href="/">
+                            <input type="button" value="Cancel" formnovalidate>
+                        </a>
+                    </div>
+                    <div class="form-field submit">
+                        <input class="edit-save" type="submit" value="Save">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
