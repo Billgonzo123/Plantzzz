@@ -2,10 +2,17 @@
     position: relative;
 }
 
-.card-container i {
+.edit-icon {
     position: absolute;
     top: 20;
     right: 20;
+    color: #000
+}
+
+.info-icon {
+    position: absolute;
+    top: 20;
+    left: 20;
     color: #000
 }
 
