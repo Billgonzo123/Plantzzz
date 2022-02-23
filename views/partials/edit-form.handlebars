@@ -33,6 +33,7 @@
                     <div class="form-field">
                         <label for="wf-value">Days</label>
                         <select name="frequency-number" class="multiplier" id="wfVal" required>
+                            <option value="">Select days</option>
                             {{#if userPlant}}
                             <option value="{{waterFreq userPlant.watering_interval true false}}">{{waterFreq userPlant.watering_interval true false}}</option>
                          
@@ -48,7 +49,8 @@
                     </div>
                     <div class="form-field">
                         <label for="frequency-multiplier">Weeks</label>
-                        <select name="frequency-multiplier" class="multiplier" id="wfMult">
+                        <select name="frequency-multiplier" class="multiplier" id="wfMult" required>
+                            <option value="">Select weeks</option>
                             {{#if userPlant}}
                             <option value={{waterFreq userPlant.watering_interval false true }}>{{waterFreq userPlant.watering_interval false false}}</option>
                             {{/if}}
@@ -62,6 +64,9 @@
                 </div>
 
                 <div class="edit-buttons">
+                    <div class="form-field submit">
+                        <input class="edit-save" type="submit" value="Save">
+                    </div>
                     {{#if userPlant}}
                     <div class="form-field delete">
                         <input type="submit" value="Delete" formnovalidate>
@@ -71,9 +76,6 @@
                         <a href="/">
                             <input type="button" value="Cancel" formnovalidate>
                         </a>
-                    </div>
-                    <div class="form-field submit">
-                        <input class="edit-save" type="submit" value="Save">
                     </div>
                 </div>
             </form>
