@@ -93,3 +93,16 @@ select {
     height: 350px;
   }
 }
+
+/* invalid form input style */
+input.error, select.error {
+  border: 1px solid red;
+  color: red;
+ 
+}
+
+/* valid form input style */
+:required:valid {
+  border: none;
+  color: black;
+} 
