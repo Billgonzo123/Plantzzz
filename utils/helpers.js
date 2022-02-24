@@ -3,24 +3,24 @@
 module.exports = {
   imageFile: commonName => {
     return commonName
-    .replace(/ /g,'_')
-    .toLowerCase();
+      .replace(/ /g, '_')
+      .toLowerCase();
   },
 
 
-  
+
   //Transforms common_name so it can be used in URL links
   plantURL: commonName => {
     return commonName
-    .replace(/ /g,'-')
-    .toLowerCase();
+      .replace(/ /g, '-')
+      .toLowerCase();
   },
-  
+
   waterFreq: (interval, dayFlag, weeksAsDays) => {
-    const day = Math.floor(interval % 7) ;
-    let week = Math.floor(interval/7);
-    if (weeksAsDays) week = week*7; 
-      
+    const day = Math.floor(interval % 7);
+    let week = Math.floor(interval / 7);
+    if (weeksAsDays) week = week * 7;
+
     return dayFlag ? day : week;
   },
 
@@ -39,8 +39,8 @@ module.exports = {
     // }
     return week;
   },
-  
-  //check userPlant for watering days
+
+  //check all userPlants for watering days
   renderUserPlants: (userPlants) => {
     let dates = [];
     //populate dates array with date keys for 14days, each with an empty plants array and a noTask flag
@@ -63,6 +63,17 @@ module.exports = {
       if (!dates[dates.length - 1].plants[0]) dates[dates.length - 1].noTasks = true;
     }
     return dates;
+  },
+
+  //check userPlant need water today
+  checkWaterStatus: (userPlant) => {
+    let todaysDate = new Date();
+    const firstWaterDate = new Date(userPlant.initial_water_date);
+    const diff = getDifferenceInDays(todaysDate, firstWaterDate);
+    let needsWater = [0];
+    //if there is no remainder, then current date is a day of watering
+    (diff % userPlant.watering_interval) ? false : needsWater = [1];
+    return needsWater;
   }
 };
 

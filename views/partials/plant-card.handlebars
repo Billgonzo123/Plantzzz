@@ -1,5 +1,11 @@
 <div class="card-container">
-  <div class="card plant-card good">
+  {{#each (checkWaterStatus this) as |needsWater|}}
+  {{#if needsWater}}
+  <div class="card plant-card fair">
+    {{else}}
+    <div class="card plant-card good">
+  {{/if}}
+  {{/each}}
     <a href="/edit/{{id}}"><i class="fa-regular fa-pen-to-square fa-xl edit-icon"></i></a>
     <a href="/plant-profile/{{id}}">
      <img
