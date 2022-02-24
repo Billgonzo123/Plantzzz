@@ -1,14 +1,18 @@
 # Plantzzz
 
 ## Description
-An app to help you water your house plants! 
+Plantzzz aims to help you and your friends keep your house plants thriving. If you're like us and have a hard time remembering when to water your houseplants, our app is here to help. Plantzzz is an app that allows you to consolidate your house plant information and will remind you to water them. In addition, you can find helpful information about all kinds of plants, as well as default times to water.
 
-
-
-## Table of Contents  
-    
-* [Usage](#usage)
-* [Contributors](#contributors) 
+### Features Include:
+- Add/Edit house plants in your personal database
+- Nickname your plants to easily differentiate between them
+- Recommended watering cycles for each plant type
+- Auto generated watering schedule
+- Provides general info on the types of plants you have
+  - Type of Light 
+  - Maintenance Difficulty
+  - Soil Type
+  - Pet Toxicity 
        
 
 ## Usage
@@ -20,7 +24,7 @@ Simply click the Add Plant card on your dashboard. From here you can:
 
 Once you have populated your dashboard with your beloved plants:   
 - The watering schedule will populate with the next two weeks of watering cycles
-- Edit an existing plant by clicking the edit icon on the upper right corner of a plants card
+- Edit an existing plant by clicking the edit icon on the upper right corner of a plant's card
 - View general information about your plant type by clicking on its image
 
 ## Contributors
@@ -30,5 +34,8 @@ Once you have populated your dashboard with your beloved plants:
 [<img src="https://avatars.githubusercontent.com/u/88542124?v=4" width='100px'/>](https://github.com/cabosw)   
  ---ckurz098-------emdok---------cabosw---         
 
-## Licence [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## License  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 This software is distributed under the MIT License. 
+
+
+
