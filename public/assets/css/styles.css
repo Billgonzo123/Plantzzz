@@ -90,16 +90,14 @@ a:hover {
   color: rgb(111, 111, 111);
 }
 
+.spacer {
+  padding: 75px;
+}
+
 #banner-link {
   position: sticky;
   top: 0;
   text-align: center;
-}
-
-.form-field.submit {
-  text-align: center;
-  flex: 0;
-  width: 100px;
 }
 
 .submit input {

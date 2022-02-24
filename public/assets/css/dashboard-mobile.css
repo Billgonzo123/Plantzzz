@@ -16,12 +16,20 @@
 }
 
 @media only screen and (max-width: 850px) {
+h1 {
+  font-size: 48px;
+}
+
   #title-header {
     margin: 0;
     width: 100%;
   }
   .schedule {
     z-index: 0;
+  }
+
+  .spacer {
+    display: none;
   }
 
   .mobile-nav {
