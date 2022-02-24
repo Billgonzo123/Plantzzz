@@ -23,6 +23,7 @@ nav {
 }
 
 #banner-link {
+  flex: 1;
   position: sticky;
   top: 0;
   text-align: center;
@@ -99,10 +100,6 @@ a:hover {
   text-align: center;
 }
 
-/* .form-field.submit {
-  flex: 0;
-} */
-
 .submit input {
   background-color: #67b46e;
   color: #fff;
@@ -128,6 +125,7 @@ a:hover {
 }
 
 .account-icon {
+  flex: 0;
   width: 60px;
   height: 60px;
   margin: 20px 0px 0px 20px;

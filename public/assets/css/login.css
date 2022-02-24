@@ -48,6 +48,12 @@ html {
   margin: auto;
 }
 
+.form-field.submit {
+  text-align: center;
+  flex: 0;
+  width: 100%;
+}
+
 form {
   display: flex;
   flex-direction: column;

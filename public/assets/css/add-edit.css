@@ -63,11 +63,6 @@ select {
   justify-content: space-evenly;
 }
 
-/* .edit-delete,
-.edit-cancel,
-.edit-save {
-  width: 30%;
-} */
 
 @media only screen and (max-width: 850px) {
   .add-edit {
