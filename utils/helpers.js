@@ -23,6 +23,22 @@ module.exports = {
       
     return dayFlag ? day : week;
   },
+
+  suggestedDay: (dbInterval) => {
+    let day = Math.floor(dbInterval % 7);
+    if (!day) {
+      day = 0
+    }
+    return day;
+  },
+
+  suggestedWeek: (dbInterval) => {
+    let week = Math.floor(dbInterval / 7);
+    // if (!week) {
+    //   week = 0
+    // }
+    return week;
+  },
   
   //check userPlant for watering days
   renderUserPlants: (userPlants) => {
