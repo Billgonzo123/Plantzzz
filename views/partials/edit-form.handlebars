@@ -28,14 +28,15 @@
                     {{/if}}
                     required>
                 </div>
-                <label for="watering-frequency">Watering Frequency</label>
+                <label for="watering-frequency">Watering frequency</label>
                 <div class="frequency">
                     <div class="form-field">
                         <label for="wf-value">Days</label>
                         <select name="frequency-number" class="multiplier" id="wfVal" required>
                             {{#if userPlant}}
                             <option value="{{waterFreq userPlant.watering_interval true false}}">{{waterFreq userPlant.watering_interval true false}}</option>
-                         
+                            {{else}}
+                            <option value="">Select Interval</option>
                             {{/if}}
                             <option value="0">0</option>
                             <option value="1">1</option>
@@ -48,9 +49,11 @@
                     </div>
                     <div class="form-field">
                         <label for="frequency-multiplier">Weeks</label>
-                        <select name="frequency-multiplier" class="multiplier" id="wfMult">
+                        <select name="frequency-multiplier" class="multiplier" id="wfMult" required>
                             {{#if userPlant}}
                             <option value={{waterFreq userPlant.watering_interval false true }}>{{waterFreq userPlant.watering_interval false false}}</option>
+                             {{else}}
+                            <option value="">Select Interval</option>
                             {{/if}}
                             <option value="0">0</option>
                             <option value="7">1</option>
@@ -62,6 +65,9 @@
                 </div>
 
                 <div class="edit-buttons">
+                    <div class="form-field submit">
+                        <input class="edit-save" type="submit" value="Save">
+                    </div>
                     {{#if userPlant}}
                     <div class="form-field delete">
                         <input type="submit" value="Delete" formnovalidate>
@@ -71,9 +77,6 @@
                         <a href="/">
                             <input type="button" value="Cancel" formnovalidate>
                         </a>
-                    </div>
-                    <div class="form-field submit">
-                        <input class="edit-save" type="submit" value="Save">
                     </div>
                 </div>
             </form>
