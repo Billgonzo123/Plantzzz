@@ -1,13 +1,12 @@
 .add-edit {
   margin: 0px 20px 0px 20px;
-  
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 5%;
   min-height: 80%;
 }
-
 
 .add-edit-title {
   margin: auto;
@@ -26,9 +25,6 @@
 .container-right {
   padding-top: 125px;
 }
-
-
-
 
 .edit-card {
   width: 98%;
@@ -67,10 +63,8 @@ select {
   justify-content: space-evenly;
 }
 
-
 @media only screen and (max-width: 850px) {
   .add-edit {
-    
     justify-content: center;
     align-items: center;
     gap: 40px;
@@ -96,14 +90,14 @@ select {
 }
 
 /* invalid form input style */
-input.error, select.error {
+input.error,
+select.error {
   border: 1px solid red;
   color: red;
- 
 }
 
 /* valid form input style */
 :required:valid {
   border: none;
   color: black;
-} 
+}
