@@ -71,10 +71,6 @@ main {
 }
 
 @media only screen and (max-width: 1160px) {
-  /*Big smartphones [426px -> 600px]*/
-  h1 {
-    font-size: 48px;
-  }
 
   .add-plant {
     margin-top: 7px;

@@ -1,12 +1,13 @@
 .add-edit {
+  margin: 0px 20px 0px 20px;
   padding-top: 130px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
   gap: 5%;
   min-height: 80%;
 }
+
 .add-edit-title {
   margin: auto;
   margin-top: -20px;
@@ -59,15 +60,14 @@ select {
 
 .edit-buttons {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
-.edit-delete,
+/* .edit-delete,
 .edit-cancel,
 .edit-save {
   width: 30%;
-}
+} */
 
 @media only screen and (max-width: 850px) {
   .add-edit {
