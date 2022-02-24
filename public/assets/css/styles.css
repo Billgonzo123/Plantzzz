@@ -171,9 +171,9 @@ a:hover {
   text-align: center;
 }
 
-input{
-  box-sizing:border-box
-} 
+input {
+  box-sizing: border-box;
+}
 
 /* Change color of dropdown links on hover */
 .menu-content a:hover {
@@ -185,11 +185,9 @@ input{
   display: block;
 }
 
-
-@media only screen and (max-width:424px) {
+@media only screen and (max-width: 424px) {
   #title-header {
     top: 17px;
     font-size: 47px;
-    }
+  }
 }
-
