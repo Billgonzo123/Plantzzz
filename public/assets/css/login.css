@@ -104,6 +104,5 @@ label {
 @media only screen and (max-width: 500px) {
     .logo h1 {
       font-size: 69px;
-      padding-left: 10vw;
     }
   }
