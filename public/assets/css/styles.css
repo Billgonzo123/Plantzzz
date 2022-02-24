@@ -182,3 +182,12 @@ a:hover {
 .menu:hover .menu-content {
   display: block;
 }
+
+
+@media only screen and (max-width:424px) {
+  #title-header {
+    top: 17px;
+    font-size: 47px;
+    }
+}
+
