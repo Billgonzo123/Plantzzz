@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const getDB = require('../utils/getDB');
-const { withAuth, testSession } = require('../utils/auth');
+const { withAuth } = require('../utils/auth');
 
 router.get('/', withAuth,  async (req, res) => {
 //get all the plants and session user data

@@ -22,17 +22,16 @@ const userIdMatch = (req, res, next) => {
 }
 
 
-const testSession =  (req, res, next) => { // <------This is a test session. delete this code and where they appear in the routes when login functionality is available
-
- req.session.save(() => {
-    req.session.user_id = 1; //<--- change this to change the id of the test user
-    req.session.username = 'User 1'; 
-    req.session.loggedIn = true;
- 
-    console.log( 'message: You are now logged in as a test user!' );
- next();
- });
+const checkReferer = (req, res, next) => { 
+    next();
+    // if (req.get('referer') && req.get('referer').includes('plantzzz.herokuapp.com/')) {
+    //     next();
+    // } else {
+    //     console.log('UNKNOWN REFERER: ', req.get('referer'));
+    //     console.log('Attempt to call user data form unknown source')
+    //     res.json({message: 'Access Denied'})
+    // }
 }
  ////------end test session login-----//
 
-module.exports = {withAuth, isAdmin, testSession, userIdMatch};
+module.exports = {withAuth, isAdmin, userIdMatch, checkReferer};

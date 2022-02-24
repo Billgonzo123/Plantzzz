@@ -1,12 +1,12 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Users, UserPlants, Plants } = require('../../models');
-const { withAuth, isAdmin, userIdMatch } = require('../../utils/auth') //this is middleware to check if user is loggin
+const { withAuth, isAdmin, userIdMatch, checkReferer } = require('../../utils/auth') //this is middleware to check if user is loggin
 
 //-----api route /api/users-----//
 
 //GET all user info
-router.get('/', (req, res) => {
+router.get('/',checkReferer, (req, res) => {
     Users.findAll({})
         .then(dbUserData => res.json(dbUserData))
         .catch(err => {
@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 });
 
 //GET one user by include api/user/id
-router.get('/:id', (req, res) => {
+router.get('/:id',checkReferer, (req, res) => {
     Users.findOne({
         where: {
             id: req.params.id
@@ -34,7 +34,7 @@ router.get('/:id', (req, res) => {
 });
 
 //POST new user api/user
-router.post('/', (req, res) => {
+router.post('/',checkReferer, (req, res) => {
     //expects {"username": "Name", "email": "Useremail@mail.com", "password": "userpassword" }
     Users.create({
         first_name: req.body.first_name,
@@ -53,7 +53,7 @@ router.post('/', (req, res) => {
 })
 
 // PUT /api/users/1
-router.put('/:id', withAuth, userIdMatch,  (req, res) => {
+router.put('/:id', withAuth, userIdMatch,checkReferer,  (req, res) => {
     // expects in the body any combonation of {username: 'newusername', email: 'new@gmail.com', password: 'newpassword1234'}
 
     // if req.body has exact key/value pairs to match the model, you can just use `req.body` instead
