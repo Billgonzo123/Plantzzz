@@ -32,11 +32,9 @@
                 <div class="frequency">
                     <div class="form-field">
                         <label for="wf-value">Days</label>
-                        <select name="frequency-number" class="multiplier" id="wfVal" required>
+                        <select name="frequency-number" class="multiplier" id="wfVal">
                             {{#if userPlant}}
                             <option value="{{waterFreq userPlant.watering_interval true false}}">{{waterFreq userPlant.watering_interval true false}}</option>
-                            {{else}}
-                            <option value="">Select Interval</option>
                             {{/if}}
                             <option class="day-freq" value="0">0</option>
                             <option class="day-freq" value="1">1</option>
@@ -49,15 +47,13 @@
                     </div>
                     <div class="form-field">
                         <label for="frequency-multiplier">Weeks</label>
-                        <select name="frequency-multiplier" class="multiplier" id="wfMult" required>
+                        <select name="frequency-multiplier" class="multiplier" id="wfMult">
                             {{#if userPlant}}
                             <option value={{waterFreq userPlant.watering_interval false true }}>{{waterFreq userPlant.watering_interval false false}}</option>
-                             {{else}}
-                            <option value="">Select Interval</option>
                             {{/if}}
                             <option class="week-freq" value="0">0</option>
                             <option class="week-freq" value="7">1</option>
-                            <option class="week-freq" value="14">2</option>
+                            <option class="week-freq" value="14" selected="selected">2</option>
                             <option class="week-freq" value="21">3</option>
                             <option class="week-freq" value="28">4</option>
                         </select>
