@@ -171,7 +171,9 @@ a:hover {
   text-align: center;
 }
 
-
+input{
+  box-sizing:border-box
+} 
 
 /* Change color of dropdown links on hover */
 .menu-content a:hover {
