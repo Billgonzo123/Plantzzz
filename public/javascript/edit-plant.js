@@ -1,3 +1,4 @@
+
 const hiddenPlant = document.querySelector("#hidden-plant").value;
 
 async function editPlantFormHandler(event) {
@@ -13,10 +14,10 @@ const userSelectWfMult = document.querySelector("#wfMult").value.trim();
   userPlantId = userPlantId.split("/")[2];
 
   if (
-    userSelectPlant ||
-    userSelectNickname ||
-    userSelectDPLW ||
-    userSelectWfVal ||
+    userSelectPlant &&
+    userSelectNickname &&
+    userSelectDPLW &&
+    userSelectWfVal &&
     userSelectWfMult
   ) {
     const water_int = parseInt(userSelectWfVal) + parseInt(userSelectWfMult);
@@ -52,4 +53,6 @@ function populate () {
 }
 populate();
 
-document.querySelector(".submit").addEventListener("click", editPlantFormHandler);
+
+
+document.querySelector('#edit-form').addEventListener("submit", editPlantFormHandler)

@@ -1,22 +1,37 @@
 <link rel="stylesheet" href="/assets/css/tasks.css" />
 
 <div id="taskDiv">
- 
+
     <ul>
         {{#each (renderUserPlants this)}}
         <li id="taskListItem">
+            {{#if noTasks}}
+                {{#unless @index}}
+                <p class="todayDate greyedOut">Today</p>
+                {{else}}
+                <p class="taskDate greyedOut">{{date}}</p>
+                {{/unless}}
+                <p class="noTask greyedOut"> No Tasks</p>
 
-            {{#unless @index}}
-            <p class="todayDate">Today</p>
             {{else}}
-            <p class="taskDate">{{date}}</p>
-            {{/unless}}
+            
+                {{#unless @index}}
+                <p class="todayDate">Today</p>
+                {{else}}
+                <p class="taskDate">{{date}}</p>
+                {{/unless}}
 
-            {{#each plants as |plant|}}
-            <p id="taskPlant">&#8226 {{plant}}</p>
+                {{#each plants as |plant|}}
+                <p class="taskPlant">&#8226 {{plant}}</p>
+                {{/each}}
+            {{/if}}
+               
+                
+                
+
             {{/each}}
-            {{/each}}
+
         </li>
-       
+
     </ul>
 </div>

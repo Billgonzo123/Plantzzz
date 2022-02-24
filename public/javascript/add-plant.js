@@ -1,3 +1,4 @@
+
 async function cancelFormHandler(event) {
   event.preventDefault();
   document.location.replace("/");
@@ -100,4 +101,4 @@ document.querySelector("#select-plant").addEventListener("change", frequencyHand
 
 document.querySelector(".cancel").addEventListener("click", cancelFormHandler);
 
-document.querySelector(".submit").addEventListener("click", addPlantFormHandler);
+document.querySelector('#edit-form').addEventListener("submit", addPlantFormHandler);

@@ -1,43 +1,46 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plantzzz</title>
-    <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link rel="stylesheet" href="/assets/css/dashboard-styles.css" />
-    <link rel="stylesheet" href="/assets/css/login.css" />
-    <link rel="stylesheet" href="/assets/css/plant-card.css" />
-    <link rel="stylesheet" href="/assets/css/add-edit.css" />
-    <link rel="stylesheet" href="/assets/css/dashboard-mobile.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alata&family=Biryani:wght@200;300;400;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-<script src="https://kit.fontawesome.com/b412230674.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a id="banner-link" href="/">
-          <h1 id="title-header">Plantzzz</h1>
-        </a>
-        {{#if loggedIn}}
-          <div class="menu">
-            <button class="account-icon">{{firstLetter}}</button>
-            <div class="menu-content">
-              <a id="logout" href="/login">Logout</a>
-            </div>
-          </div>
-        {{/if}}
-      </nav>
-    </header>
-    <!--below is where handlebars will render views with res.render()-->
-    {{{body}}}
-  </body>
-  {{#if loggedIn}}
-    <script src="/javascript/logout.js"></script>
-  {{/if}}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plantzzz</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/dashboard-styles.css" />
+  <link rel="stylesheet" href="/assets/css/login.css" />
+  <link rel="stylesheet" href="/assets/css/plant-card.css" />
+  <link rel="stylesheet" href="/assets/css/add-edit.css" />
+  <link rel="stylesheet" href="/assets/css/dashboard-mobile.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alata&family=Biryani:wght@200;300;400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/b412230674.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      {{#if loggedIn}}
+      <div class="menu">
+        <button class="account-icon">{{firstLetter}}</button>
+        <div class="menu-content">
+          <a id="logout" href="/login">Logout</a>
+        </div>
+      </div>
+      {{/if}}
+      <a id="banner-link" href="/">
+        <h1 id="title-header">Plantzzz</h1>
+      </a>
+    </nav>
+  </header>
+  <!--below is where handlebars will render views with res.render()-->
+  {{{body}}}
+</body>
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+{{/if}}
+
 </html>
