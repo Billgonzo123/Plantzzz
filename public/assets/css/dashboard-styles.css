@@ -54,6 +54,11 @@ main {
   animation: flyLeft 1s;
   z-index: 100;
 }
+@media only screen and (max-width: 1800px) {
+  .plant-grid {
+    grid-template-columns: 50% 50%;
+  }
+}
 
 @media only screen and (max-width: 1600px) {
   .plant-grid {
