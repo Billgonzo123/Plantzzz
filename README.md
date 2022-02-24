@@ -1,13 +1,13 @@
 # Plantzzz
 
 ## Description
-Plantzzz aims to help you and your friends keep your house plants thriving. If you're like us and have a hard time remembering when to water your houseplants, our app is here to help. Plantzzz is an app that allows you to consolidate your house plant information and will remind you to water them. In addition, you can find helpful information about all kinds of plants, as well as default times to water.
+Plantzzz aims to help you and your friends keep your house plants thriving. If you're like us and have a hard time remembering when to water your houseplants, our app is here to help. Plantzzz is an app that allows you to consolidate your house plants into a personal database. It will  remind you of watering dates, provide helpful information about all kinds of plants and much more!
 
 ### Features Include:
 - Add/Edit house plants in your personal database
 - Nickname your plants to easily differentiate between them
-- Recommended watering cycles for each plant type
-- Auto generated watering schedule
+- Provides recommended watering cycles for each plant type
+- Auto generates a watering schedule
 - Provides general info on the types of plants you have
   - Type of Light 
   - Maintenance Difficulty
@@ -36,6 +36,3 @@ Once you have populated your dashboard with your beloved plants:
 
 ## License  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 This software is distributed under the MIT License. 
-
-
-
