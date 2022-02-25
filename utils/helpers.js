@@ -56,7 +56,7 @@ module.exports = {
         //get how many days since inital water date
         const diff = getDifferenceInDays(newDate, firstWaterDate);
         //if there is no remainder, then current date is a day of watering
-        (diff % plant.watering_interval) ? false : dates[i].plants.push('Water ' + plant.nickname);
+        (diff % plant.watering_interval-1) ? false : dates[i].plants.push('Water ' + plant.nickname);
       })
       //if the the current date has no plants, set the noTask flag to true
       //this tells handlebars to format the list item differently
@@ -72,7 +72,7 @@ module.exports = {
     const diff = getDifferenceInDays(todaysDate, firstWaterDate);
     let needsWater = [0];
     //if there is no remainder, then current date is a day of watering
-    (diff % userPlant.watering_interval) ? false : needsWater = [1];
+    (diff % userPlant.watering_interval - 1) ? false : needsWater = [1];
     return needsWater;
   }
 };
