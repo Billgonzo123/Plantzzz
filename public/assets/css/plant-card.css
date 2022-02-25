@@ -29,7 +29,7 @@
 
 .plant-card img {
   width: 100%;
-  height: -webkit-fill-available;
+  /* height: -webkit-fill-available; */
 }
 
 .good {

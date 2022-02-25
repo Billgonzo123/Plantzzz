@@ -127,7 +127,7 @@ a:hover {
 .account-icon {
   flex: 0;
   width: 60px;
-  height: 60px;
+
   margin: 20px 0px 0px 20px;
   background: #145f5a;
   color: #fff;
@@ -142,6 +142,12 @@ a:hover {
   align-items: center;
   justify-content: center;
   animation: fadeIn 3.5s;
+}
+
+@supports not (-webkit-touch-callout: none) {
+  .account-icon {
+    height: 60px;
+  }
 }
 
 .menu {
