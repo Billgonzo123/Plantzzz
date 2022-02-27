@@ -1,7 +1,6 @@
-:root {
-  --title-font: "Alata", sans-serif;
-  --main-font: "Biryani", sans-serif;
-}
+/* Styles specific to the Plant Dashboard */
+
+@import "styles.css";
 
 main {
   display: flex;

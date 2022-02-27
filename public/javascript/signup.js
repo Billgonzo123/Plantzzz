@@ -1,3 +1,4 @@
+// Function to handle user signup
 async function signupFormHandler(event) {
     event.preventDefault();
 

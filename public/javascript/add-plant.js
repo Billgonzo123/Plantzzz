@@ -1,8 +1,10 @@
+// Add / Edit Cancel button functionality
 async function cancelFormHandler(event) {
   event.preventDefault();
   document.location.replace("/");
 }
 
+// Add / Edit Save button functionality
 async function addPlantFormHandler(event) {
   event.preventDefault();
 
@@ -36,6 +38,7 @@ async function addPlantFormHandler(event) {
   }
 }
 
+// Function to grab stored watering frequency and display on page load
 async function frequencyHandler() {
   let wkOption = document.querySelectorAll(".week-freq");
   let dayOption = document.querySelectorAll(".day-freq");
@@ -71,6 +74,7 @@ async function frequencyHandler() {
     });
 }
 
+// Functions to convert Watering Frequency to days
 function dayFreq(int) {
   let day = Math.floor(int % 7);
   if (!day) {

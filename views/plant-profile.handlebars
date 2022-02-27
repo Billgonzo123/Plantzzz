@@ -1,42 +1,48 @@
-
 <div class="spacer">
 </div>
 <div class="add-edit">
-    <div class="container-left">
-      <div class="heading add-edit-title">
-        <h2><b>{{userPlant.nickname}}</b></h2>
-      </div>
-      <div class="container">
-        <div class="card edit-card">
-          <img id="plant-image" src="/assets/img/{{imageFile userPlant.plant.common_name}}.jpg" alt="">
-        </div>
+  <div class="container-left">
+    <div class="heading add-edit-title">
+      <h2><b>{{userPlant.nickname}}</b></h2>
+    </div>
+    <div class="container">
+      <div class="card edit-card">
+        <img id="plant-image" src="/assets/img/{{imageFile userPlant.plant.common_name}}.jpg" alt="">
       </div>
     </div>
-    <div class="container-right">
-      <h3><b>Common Name: </b>{{userPlant.plant.common_name}}</h3>
+  </div>
+  <div class="container-right">
+    <h3><b>Common Name: </b>{{userPlant.plant.common_name}}</h3>
 
-      <h3><b>Botanical Name: </b>{{userPlant.plant.botanical_name}}</h3>
+    <h3><b>Botanical Name: </b>{{userPlant.plant.botanical_name}}</h3>
 
-      <h3><b>Reccomended Watering Frequency: </b>Every {{userPlant.plant.watering_interval}} days</h3>
+    <h3><b>Reccomended Watering Frequency: </b>Every {{userPlant.plant.watering_interval}} days</h3>
 
-      <h3><b>Light: </b>{{userPlant.plant.light}}</h3>
+    <h3><b>Light: </b>{{userPlant.plant.light}}</h3>
 
-      <h3><b>Difficulty: </b>{{userPlant.plant.difficulty}}</h3>
-  
-      <h3><b>Soil: </b>{{userPlant.plant.soil}}</h3>
+    <h3><b>Difficulty: </b>{{userPlant.plant.difficulty}}</h3>
 
-      <h3><b>Temperature: </b>{{userPlant.plant.temp}}</h3>
-    
-      {{#if userPlant.plant.pet_safe}}
-        <h3><b>Non-toxic</b></h3>
-      {{else}}
-        <h3><b>This plant is not safe for pets!</b></h3>
-        <h3><a href="https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/{{plantURL userPlant.plant.common_name}}" target="_blank">Resource for plant toxicity information</a>
+    <h3><b>Soil: </b>{{userPlant.plant.soil}}</h3>
+
+    <h3><b>Temperature: </b>{{userPlant.plant.temp}}</h3>
+
+    {{#if userPlant.plant.pet_safe}}
+    <h3><b>Non-toxic</b></h3>
+
+    {{else}}
+
+    <h3><b>This plant is not safe for pets!</b></h3>
+    <h3><a
+        href="https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/{{plantURL userPlant.plant.common_name}}"
+        target="_blank">Resource for plant toxicity information</a>
+
       {{/if}}
-      <h3><a href="https://www.guide-to-houseplants.com/{{plantURL userPlant.plant.common_name}}.html" target="_blank" >Click here for more info on how to care for your {{userPlant.plant.common_name}}!</a></h3>
+
+      <h3><a href="https://www.guide-to-houseplants.com/{{plantURL userPlant.plant.common_name}}.html"
+          target="_blank">Click here for more info on how to care for your {{userPlant.plant.common_name}}!</a></h3>
       <form action="/">
         <input type="submit" value="Back" class="cancel" />
       </form>
-    </div>
+  </div>
 
 </div>

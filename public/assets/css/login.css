@@ -1,7 +1,6 @@
-:root {
-  --title-font: "Alata", sans-serif;
-  --main-font: "Biryani", sans-serif;
-}
+/* Styles for the Login / Signup Page */
+
+@import "styles.css";
 
 html {
   height: 100%;
@@ -106,4 +105,3 @@ label {
       font-size: 69px;
     }
   }
-}

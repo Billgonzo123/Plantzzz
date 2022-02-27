@@ -13,7 +13,7 @@ module.exports = {
       .replace(/ /g, '-')
       .toLowerCase();
   },
-
+  // Convert water frequency to days from Database
   waterFreq: (interval, dayFlag, weeksAsDays) => {
     const day = Math.floor(interval % 7);
     let week = Math.floor(interval / 7);
@@ -21,7 +21,7 @@ module.exports = {
 
     return dayFlag ? day : week;
   },
-
+  // Convert watering frequency interval to days
   suggestedDay: (dbInterval) => {
     let day = Math.floor(dbInterval % 7);
     if (!day) {
@@ -29,12 +29,12 @@ module.exports = {
     }
     return day;
   },
-
+  // Convert watering frequency to weeks
   suggestedWeek: (dbInterval) => {
     let week = Math.floor(dbInterval / 7);
-    // if (!week) {
-    //   week = 0
-    // }
+    if (!week) {
+      week = 0
+    }
     return week;
   },
 
