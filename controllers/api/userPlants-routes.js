@@ -158,6 +158,7 @@ router.post('/', withAuth, (req, res) => {
 //PUT update user plant by id
 router.put('/:id',withAuth , (req, res) => {
 //find plants with ID that also has the user_id of the logged in user
+console.log('-------------',req.body)
     UserPlants.update(req.body, {
         where: {
             id: req.params.id,
@@ -165,6 +166,7 @@ router.put('/:id',withAuth , (req, res) => {
         }
     })
         .then(dbUserPlantData => {
+         
             if (!dbUserPlantData[0]) {
                 res.status(404).json({ message: 'User Plant not found under this ID or nothing to update' })
                 return;
