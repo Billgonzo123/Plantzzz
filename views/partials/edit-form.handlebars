@@ -16,6 +16,7 @@
                 <label for="plant-nickname">Plant Nickname</label>
                 <input id="plant-nickname" type="text" class="form-input" 
 
+                {{!-- If logged in user, display their plants --}}
                 {{#if userPlant.plant_id}}
                     value="{{userPlant.nickname}}" {{else}} placeholder="James the Giant Jade" 
                 {{/if}} required>
@@ -24,7 +25,7 @@
             <div class="form-field">
                 <label for="last-watered">Date Plant Last Watered</label>
                 <input id="last-watered" type="date" class="form-input" 
-                
+
                 {{#if userPlant}}
                     value={{userPlant.initial_water_date}} 
                 {{/if}} required>
