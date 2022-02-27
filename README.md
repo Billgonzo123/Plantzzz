@@ -3,6 +3,12 @@
 ## Description
 Plantzzz aims to help you and your friends keep your house plants thriving. If you're like us and have a hard time remembering when to water your houseplants, our app is here to help. Plantzzz is an app that allows you to consolidate your house plants into a personal database. It will  remind you of watering dates, provide helpful information about all kinds of plants and much more!
 
+## Table of Contents (Optional)
+
+- [Usage](#usage)
+- [Contributors](#contributors)
+- [License](#license)
+
 ### Features Include:
 - Add/Edit house plants in your personal database
 - Nickname your plants to easily differentiate between them
@@ -12,8 +18,8 @@ Plantzzz aims to help you and your friends keep your house plants thriving. If y
   - Type of Light 
   - Maintenance Difficulty
   - Soil Type
-  - Pet Toxicity 
-       
+  - Pet Toxicity
+- Mobile Friendly 
 
 ## Usage
 Simply click the Add Plant card on your dashboard. From here you can:   
@@ -26,6 +32,21 @@ Once you have populated your dashboard with your beloved plants:
 - The watering schedule will populate with the next two weeks of watering cycles
 - Edit an existing plant by clicking the edit icon on the upper right corner of a plant's card
 - View general information about your plant type by clicking on its image
+
+### Login:
+![alt text](public/assets/img/readme_ss_img/Login_ss.png)
+
+### Dashboard:
+![alt text](public/assets/img/readme_ss_img/Dashboard_ss.png)
+
+### Add/Edit:
+![alt text](public/assets/img/readme_ss_img/Edit_Plant_ss.png)
+
+### Profile:
+![alt text](public/assets/img/readme_ss_img/Profile_ss.png)
+
+### Mobile:
+![alt text](public/assets/img/readme_ss_img/Mobile_ss.png)
 
 ## Contributors
 
