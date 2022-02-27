@@ -12,8 +12,6 @@ async function addPlantFormHandler(event) {
   const userSelectWfVal = document.querySelector("#wfVal").value.trim();
   const userSelectWfMult = document.querySelector("#wfMult").value.trim();
 
-  console.log(userSelectDPLW);
-
   if (
     userSelectPlant && userSelectNickname && userSelectDPLW && userSelectWfVal && userSelectWfMult
   ) {

@@ -3,7 +3,6 @@ const scheduleBtn = document.querySelector("#schedule-btn");
 const plantGridEl = document.getElementsByClassName("plant-grid");
 const scheduleEl = document.getElementsByClassName("schedule");
 
-console.log(plantGridEl, scheduleEl);
 function plantButtonHandler() {
   plantGridEl[0].classList.add('active');
   scheduleEl[0].classList.remove('active');

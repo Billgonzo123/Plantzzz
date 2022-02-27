@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const sequelize = require('../../config/connection');
-const { Users, UserPlants, Plants } = require('../../models');
+const { Plants } = require('../../models');
 const { isAdmin } = require('../../utils/auth') //this is middleware to check if user is an admin
 
 //-----api requests for plants table /api/plants-----//

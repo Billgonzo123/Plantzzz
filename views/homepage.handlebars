@@ -2,7 +2,7 @@
 {{> mobile-nav}}
 <main>
   
-    <div class="plant-grid">
+    <div class="plant-grid active">
       <div class="card add-plant-card">
         <a class="add-plant" href="/add">+ Add Plant</a>
       </div>
@@ -32,7 +32,7 @@
     {{/if}}
   </div>
 
-  <div id="schedule" class="schedule active">
+  <div id="schedule" class="schedule">
     <h1 class="schedule-title">Schedule</h1>
     {{#if userPlants.length}}
     {{> list-items userPlants}}

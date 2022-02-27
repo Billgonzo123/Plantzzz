@@ -2,10 +2,7 @@ const router = require('express').Router();
 
 // '/login'
 router.get('/', async (req, res) => {
-    console.log('LOGIN route');
     const loggedIn = req.session.loggedIn;
-    console.log(req.session.username);
-
     let firstLetter = false;
 
     if (req.session.username) {
@@ -14,7 +11,7 @@ router.get('/', async (req, res) => {
     res.render('login', { firstLetter, loggedIn });
 })
 
-// if signup is a success '/login/#'
+// if signup is a success '/login/'
 router.get('/signedup', async (req, res) => {
     const loggedIn = req.session.loggedIn;
 
@@ -23,7 +20,7 @@ router.get('/signedup', async (req, res) => {
     if (req.session.username) {
         firstLetter = req.session.username.split('')[0];
     };
-    //test if a page sent rather than the user entering the url the user to this url
+    //test if another page requested rather than the user entering the url 
     let signedUp = false;
     if (req.get('referer')) signedUp = true;
 
