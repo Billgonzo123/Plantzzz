@@ -1,36 +1,49 @@
-
-<div class="spacer">   
+<div class="spacer">
 </div>
 <div class="add-edit">
     <div class="container-left">
-            <div class="heading add-edit-title">
-        {{#if userPlant}}
+        <div class="heading add-edit-title">
+            
+            {{#if userPlant}}
+
             <h1>Edit Plant</h1>
-        {{else}}
-            <h1>Add Plant</h1>
-        {{/if}}
-    </div>
-    <div class="container">
-        <div class="card edit-card">
-            {{#if userPlant.plant_id}}
-                <img id="plant-image" src="/assets/img/{{imageFile userPlant.plant.common_name}}.jpg" alt="">
+
             {{else}}
-                <img id="plant-image" src="/assets/img/african_violet.jpg" alt="">
+
+            <h1>Add Plant</h1>
+
             {{/if}}
+
+        </div>
+        <div class="container">
+            <div class="card edit-card">
+
+                {{#if userPlant.plant_id}}
+
+                <img id="plant-image" src="/assets/img/{{imageFile userPlant.plant.common_name}}.jpg" alt="">
+
+                {{else}}
+
+                <img id="plant-image" src="/assets/img/african_violet.jpg" alt="">
+
+                {{/if}}
+
+            </div>
         </div>
     </div>
-    </div>
 
+    {{>edit-form}}
+    {{#if userPlant}}
 
-{{>edit-form}}
-{{#if userPlant}}
-<script src="/javascript/edit-plant.js"></script>
-<script src="/javascript/plant-img.js"></script>
-<script src="/javascript/delete-plant.js"></script>
-<script src="/javascript/validation.js"></script>
-{{else}}
-<script src="/javascript/add-plant.js"></script>
-<script src="/javascript/plant-img.js"></script>
-<script src="/javascript/validation.js"></script>
+    <script src="/javascript/edit-plant.js"></script>
+    <script src="/javascript/plant-img.js"></script>
+    <script src="/javascript/delete-plant.js"></script>
+    <script src="/javascript/validation.js"></script>
 
-{{/if}}
+    {{else}}
+
+    <script src="/javascript/add-plant.js"></script>
+    <script src="/javascript/plant-img.js"></script>
+    <script src="/javascript/validation.js"></script>
+
+    {{/if}}

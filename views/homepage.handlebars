@@ -1,5 +1,6 @@
 
 {{> mobile-nav}}
+
 <main>
   
     <div class="plant-grid active">
@@ -34,13 +35,17 @@
 
   <div id="schedule" class="schedule">
     <h1 class="schedule-title">Schedule</h1>
+
     {{#if userPlants.length}}
     {{> list-items userPlants}}
     {{else}}
+
     <ul>
       <li>No Tasks</li>
     </ul>
+
     {{/if}}
+
   </div>
 
 </main>

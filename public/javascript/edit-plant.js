@@ -1,6 +1,7 @@
 
 const hiddenPlant = document.querySelector("#hidden-plant").value;
 
+// Function grab new data from Edit Plant Form on Save
 async function editPlantFormHandler(event) {
   event.preventDefault();
 
@@ -42,6 +43,7 @@ const userSelectWfMult = document.querySelector("#wfMult").value.trim();
   }
 }
 
+// Function to set the correct plant in the Select Plant Select on Edit
 function populate () {
     let option = document.querySelectorAll('.default-plant')
 

@@ -1,20 +1,23 @@
 <div class="card-container">
+
   {{#each (checkWaterStatus this) as |needsWater|}}
   {{#if needsWater}}
+
   <div class="card plant-card fair">
+
     {{else}}
+
     <div class="card plant-card good">
-  {{/if}}
-  {{/each}}
-    <a href="/edit/{{id}}"><i class="fa-regular fa-pen-to-square fa-xl edit-icon"></i></a>
-    <a href="/plant-profile/{{id}}">
-     <img
-      src="/assets/img/{{imageFile plant.common_name}}.jpg"
-      alt="{{plant.common_name}}">
+
+      {{/if}}
+      {{/each}}
+
+      <a href="/edit/{{id}}"><i class="fa-regular fa-pen-to-square fa-xl edit-icon"></i></a>
+      <a href="/plant-profile/{{id}}">
+        <img src="/assets/img/{{imageFile plant.common_name}}.jpg" alt="{{plant.common_name}}">
       </a>
-    <div class="card-title">
-      <h4>{{nickname}}</h4>
+      <div class="card-title">
+        <h4>{{nickname}}</h4>
+      </div>
     </div>
-     
   </div>
-</div>

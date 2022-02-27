@@ -1,3 +1,4 @@
+// Function to handle deleting plants
 async function deleteFormHandler(event) {
     event.preventDefault();
 
