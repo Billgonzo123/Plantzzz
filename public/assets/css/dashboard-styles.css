@@ -1,7 +1,4 @@
-:root {
-  --title-font: "Alata", sans-serif;
-  --main-font: "Biryani", sans-serif;
-}
+@import "styles.css";
 
 main {
   display: flex;

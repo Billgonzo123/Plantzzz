@@ -1,7 +1,4 @@
-:root {
-  --title-font: "Alata", sans-serif;
-  --main-font: "Biryani", sans-serif;
-}
+@import "styles.css";
 
 html {
   height: 100%;
@@ -106,4 +103,3 @@ label {
       font-size: 69px;
     }
   }
-}

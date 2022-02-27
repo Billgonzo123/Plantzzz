@@ -1,7 +1,4 @@
-:root {
-  --title-font: "Alata", sans-serif;
-  --main-font: "Biryani", sans-serif;
-}
+@import "styles.css";
 
 .mobile-nav {
   display: none;
@@ -15,6 +12,7 @@
   display: grid;
 }
 
+/* Mobile Dashboard styles */
 @media only screen and (max-width: 850px) {
   h1 {
     font-size: 48px;
