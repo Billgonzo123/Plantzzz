@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const sequelize = require('../../config/connection');
-const { Users, UserPlants, Plants } = require('../../models');
+const { Users } = require('../../models');
 const { withAuth, isAdmin, userIdMatch, checkReferer } = require('../../utils/auth') //this is middleware to check if user is loggin
 
 //-----api route /api/users-----//
@@ -117,17 +116,15 @@ router.post('/login', (req, res) => {
             res.status(400).json({ message: 'Incorrect password!' });
             return;
         }
-
         req.session.save(() => {
+            //hard coded admin email
             if (req.body.email === 'admin@adminemail.com') req.session.admin = true;
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
             req.session.loggedIn = true;
 
             res.json({ user: dbUserData, message: 'You are now logged in!' });
-
         });
-
     });
 });
 

@@ -109,8 +109,12 @@ main {
     height: 100%;
   }
 
+  .add-plant, .mobile-btn {
+    font-size: 16px;
+  }
+
   .plant-grid {
-    margin: 100px 10px 0px 10px;
+    
     grid-template-columns: auto;
   }
 }

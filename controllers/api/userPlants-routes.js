@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const sequelize = require('../../config/connection');
 const { Users, UserPlants, Plants } = require('../../models');
 const { withAuth } = require('../../utils/auth') //this is middleware to check if user is loggin
 //GET requests for api/userPlants/users
@@ -56,8 +55,6 @@ router.get('/:id', (req, res) => {
 //GET a single user plant by nickname
 router.get('/nickname/:name', (req, res) => {
     const formattedName = req.params.name.replace(/-/g,' ');
-    console.log(formattedName);
-
     UserPlants.findOne({
         where: {
             nickname: formattedName
