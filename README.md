@@ -5,7 +5,7 @@
 ## Description
 Plantzzz aims to help you and your friends keep your house plants thriving. If you're like us and have a hard time remembering when to water your houseplants, our app is here to help. Plantzzz is an app that allows you to consolidate your house plants into a personal database. It will  remind you of watering dates, provide helpful information about all kinds of plants and much more!
 
-## Table of Contents (Optional)
+## Table of Contents
 
 - [Usage](#usage)
 - [Contributors](#contributors)
@@ -24,7 +24,7 @@ Plantzzz aims to help you and your friends keep your house plants thriving. If y
 - Mobile Friendly 
 
 ## Usage
-Follow [this think](https://plantzzz.herokuapp.com/signup) and make an account.  
+Follow [this link](https://plantzzz.herokuapp.com/signup) and make an account.  
 
 Simply click the Add Plant card on your dashboard. From here you can:   
 - Choose from a list of house plants   
